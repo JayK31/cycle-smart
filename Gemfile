@@ -38,3 +38,24 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem "annotate"
+  gem "rails-erd"  
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  # automatically install/update your gem bundle when needed
+  gem 'guard-bundler', require: false  
+  # automatically run your specs when files are modified
+  gem 'guard-rspec', require: false  
+  # automatically check Ruby code style
+  gem 'guard-rubocop'  
+  # Mac OS X User Notifications for Guard
+  gem 'terminal-notifier-guard'
+  gem 'rspec'
+  gem 'guard'
+  gem 'jasmine'
+  gem 'rubocop'
+end
