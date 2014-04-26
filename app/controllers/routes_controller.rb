@@ -24,6 +24,10 @@ class RoutesController < ApplicationController
     end
   end
 
+  def edit
+    binding.pry
+  end
+
 
 
 end
