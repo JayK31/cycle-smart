@@ -1,0 +1,10 @@
+<h3>Create a route: </h3>
+<%= form_for([@user, @route]) do |f| %>
+  <%= f.label :start_point %>
+  <%= f.text_field :start_point %>
+  <%= f.label :end_point %>
+  <%= f.text_field :end_point %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

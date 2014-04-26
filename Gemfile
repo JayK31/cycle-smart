@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -40,22 +40,23 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem "annotate"
-  gem "rails-erd"  
+  gem "rails-erd"
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   # automatically install/update your gem bundle when needed
-  gem 'guard-bundler', require: false  
+  gem 'guard-bundler', require: false
   # automatically run your specs when files are modified
-  gem 'guard-rspec', require: false  
+  gem 'guard-rspec', require: false
   # automatically check Ruby code style
-  gem 'guard-rubocop'  
+  gem 'guard-rubocop'
   # Mac OS X User Notifications for Guard
   gem 'terminal-notifier-guard'
   gem 'rspec'
   gem 'guard'
   gem 'jasmine'
   gem 'rubocop'
+  gem 'bcrypt', '~> 3.1.7'
 end
