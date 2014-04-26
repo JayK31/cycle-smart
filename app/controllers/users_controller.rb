@@ -7,12 +7,9 @@ class UsersController < ApplicationController
 
   # POST to users/new 
   def create
-    @user = User.new(
-          name: params[:user][:name],
-          email: params[:user][:email],
-          password: params[:user][:password],
-          password_confirmation: params[:user][:password_confirmation]
-          )
+      #strong params to create new user
+      @user = User.new(user_params)
+
       # redirect to user page and flash notice if  user saved successfully
       if @user.save        
         flash[:created] = "Account successfully created!"
@@ -50,6 +47,7 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  #find user using params from link_to, delete and send to root
   def destroy
     user = User.find(params[:id])
     user.destroy
@@ -57,6 +55,15 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  # use strong params for creating new user
+  private
 
+  def user_params
+    params.require(:user).permit(
+      :name,
+      :email,
+      :password,
+      :password_confirmation )
+  end
 
 end
