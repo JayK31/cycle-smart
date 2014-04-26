@@ -53,6 +53,8 @@ class UsersController < ApplicationController
   def destroy
     user = User.find(params[:id])
     user.destroy
+    flash[:delete] = "We hate to see you go! Cycle safe!"
+    redirect_to root_path
   end
 
 

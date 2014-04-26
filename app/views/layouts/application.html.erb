@@ -14,9 +14,10 @@
   <div class="create_error"><%= flash[:create_error] %></div>
 <% elsif flash[:update] %>
   <div class="update"><%= flash[:update] %></div>
+<% elsif flash[:delete] %>
+  <div class="delete"><%= flash[:delete] %></div>
 <% end %>
 <%= yield %>
 
 </body>
 </html>
-
