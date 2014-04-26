@@ -25,7 +25,8 @@ class RoutesController < ApplicationController
   end
 
   def edit
-    binding.pry
+    @user = User.find(params[:user_id])
+    @route = Route.find(params[:id])
   end
 
 

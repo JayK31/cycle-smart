@@ -1,8 +1,8 @@
-<h1>Edit User</h1>
+<h1>Edit Your Account</h1>
 
 <!-- form to edit user, this will route to 
 users#update with these params -->
-<% form_for(@user) do |f| %>
+<%= form_for(@user) do |f| %>
   <%= f.label(:name) %>
   <%= f.text_field(:name) %>
   <%= f.label(:email) %>
