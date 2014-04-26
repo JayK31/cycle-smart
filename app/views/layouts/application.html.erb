@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<% if flash[:created] %>
+  <div class="created"><%= flash[:created] %></div>
+<% elsif flash[:create_error] %>
+  <div class="create_error"><%= flash[:create_error] %></div>
+<% end %>
 <%= yield %>
 
 </body>
