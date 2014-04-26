@@ -11,9 +11,12 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
 
       # redirect to user page and flash notice if  user saved successfully
-      if @user.save        
+      if @user.save
+        #store session once creation
+        session[:user_id] = @user.id
         flash[:created] = "Account successfully created!"
-        redirect_to root_path
+        #redirect to new user page (syntatic sugar)
+        redirect_to @user
       # flash error, render new form is something went wrong
       else
         flash[:create_error] = "Something went wrong!"
