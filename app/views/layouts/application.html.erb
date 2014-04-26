@@ -12,8 +12,11 @@
   <div class="created"><%= flash[:created] %></div>
 <% elsif flash[:create_error] %>
   <div class="create_error"><%= flash[:create_error] %></div>
+<% elsif flash[:update] %>
+  <div class="update"><%= flash[:update] %></div>
 <% end %>
 <%= yield %>
 
 </body>
 </html>
+
