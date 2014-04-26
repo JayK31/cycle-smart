@@ -13,7 +13,7 @@ class RoutesController < ApplicationController
     @route.start_point = params[:route][:start_point]
     @route.end_point = params[:route][:end_point]
     @route.description = params[:route][:description]
-    @route.user_id = session[:user_id]
+    @route.user_id = params[:user_id]
 
     if @route.save
       flash[:message] = "Route added!"

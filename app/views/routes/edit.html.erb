@@ -1,0 +1,9 @@
+<%= form_for([@user, @route]) do |f| %>
+  <%= f.label :start_point %>
+  <%= f.text_field :start_point %> <br>
+  <%= f.label :end_point %>
+  <%= f.text_field :end_point %> <br>
+  <%= f.label :description %>
+  <%= f.text_area :description, :size => "30x10" %> <br>
+  <%= f.submit %>
+<% end %>
