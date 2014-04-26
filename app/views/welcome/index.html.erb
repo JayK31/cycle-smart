@@ -1,1 +1,18 @@
 <h1>Welcome to CycleSmart</h1>
+
+<!-- A form_tag instead of form_for because there is no model for sessions,
+  send post request to /session/create in session controller -->
+<div login id='login'>
+  <h2> Login </h2>
+  <%= form_tag("/session", method: "post") do %>
+    <%= label_tag(:email) %>
+    <%= text_field_tag(:email) %>
+    <%= label_tag(:password) %>
+    <%= password_field_tag(:password) %>
+    <%= submit_tag("Login") %>
+  <% end %>
+</div>
+<br>
+<div signup id='signup'>
+  <a href="/users/new">Get Started with CycleSmart</a>
+</div>
