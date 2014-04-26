@@ -1,0 +1,18 @@
+h1 {
+  color: white;
+  font-family: Georgia;
+}
+body {
+  background-image:url('http://www.cyclelove.net/wp-content/uploads/2012/12/nyc_bike_project_1600-101.jpg');
+  background-color:white;
+  background-repeat:no-repeat;
+}
+
+.login {
+  font-family: Georgia;
+  background-color: white;
+}
+
+.signup {
+  color: white;
+}
