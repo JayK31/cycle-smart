@@ -1,4 +1,15 @@
 <h2>Routes</h3>
 
 <%= link_to "Create a new route", new_user_route_path %>
-<%= link_to "View all routes", user_route_path %>
+
+<% @routes.each do |route| %>
+  <p>All your routes</p>
+  <ul>
+    <li>
+      <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
+        <%= route.start_point %> to <%= route.end_point %>
+      </a>
+    </li>
+  </ul>
+<% end %>
+
