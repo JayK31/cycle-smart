@@ -2,6 +2,7 @@
 
 <% if logged_in? %>
   <h2><%= current_user.name %></h2>
+  <a href="/logout"> Logout</a>
 <% end %>
 
 <!-- A form_tag instead of form_for because there is no model for sessions,
