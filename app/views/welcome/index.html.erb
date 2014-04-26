@@ -3,6 +3,8 @@
 <% if logged_in? %>
     <h2><%= current_user.name %></h2>
     <%= link_to "Your Account", user_path(current_user) %><br/>
+    <!-- use current_user here because we don't have access @user -->
+     <%= link_to "See My Routes", user_routes_path(current_user) %><br/>
     <a href="/logout"> Logout</a>
 <% else %>
     <!-- A form_tag instead of form_for because there is no model for sessions,
