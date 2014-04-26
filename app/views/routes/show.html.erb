@@ -1,0 +1,9 @@
+<h3>Hi <%= @user.name %></h3>
+<p>Here are all your routes:</p>
+
+<% @routes.each do |route| %>
+ <p><strong>Starting Point:</strong></p><%= route.start_point %>
+ <p><strong>End Point:</strong></p><%= route.end_point %>
+ <p><strong>Safety Score:</strong></p><%= route.safety_score %>
+ <p><strong>Description:</strong></p><%= route.description %>
+<% end %>
