@@ -1,11 +1,5 @@
 <h1> Want to bike smarter? Create an Account Today</h1>
 
-<% if logged_in? %>
-  <%= render "current" %>
-<% else %>
- <%= render "notlogged" %>
-<% end %>
-
 <!-- NEW USER SIGN UP FORM -->
 <%= form_for(@user) do |f| %>
   <%= f.label(:name) %>
