@@ -16,11 +16,14 @@ class RoutesController < ApplicationController
     @route.user_id = session[:user_id]
 
     if @route.save
+      flash[:message] = "Route added!"
       redirect_to root
     else
       flash[:message] = "Something went wrong! Please try again."
       render(:new)
     end
   end
+
+
 
 end
