@@ -1,5 +1,9 @@
 <h1>Welcome to CycleSmart</h1>
 
+<% if logged_in? %>
+  <h2><%= current_user.name %></h2>
+<% end %>
+
 <!-- A form_tag instead of form_for because there is no model for sessions,
   send post request to /session/create in session controller -->
 <div login id='login'>

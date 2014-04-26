@@ -15,5 +15,4 @@ class ApplicationController < ActionController::Base
   # http://api.rubyonrails.org/classes/AbstractController/Helpers/ClassMethods.html#method-i-helper_method
   # which means we can use the methods in the view as well
   helper_method(:current_user, :logged_in?)
-
 end
