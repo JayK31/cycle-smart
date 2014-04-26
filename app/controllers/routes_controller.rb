@@ -19,7 +19,7 @@ class RoutesController < ApplicationController
 
     if @route.save
       flash[:message] = "Route added!"
-      redirect_to root_path
+      redirect_to user_routes_path
     else
       flash[:message] = "Something went wrong! Please try again."
       render(:new)
@@ -36,6 +36,14 @@ class RoutesController < ApplicationController
     @route = Route.find(params[:id])
   end
 
+  def destroy
+    @user = User.find(params[:user_id])
+    @route = Route.find(params[:id])
+
+    @route.destroy
+
+    redirect_to user_routes_path
+  end
 
 
 end

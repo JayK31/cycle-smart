@@ -7,3 +7,7 @@
   <%= f.text_area :description, :size => "30x10" %> <br>
   <%= f.submit %>
 <% end %>
+
+<%= form_for([@user, @route], method: "delete") do |f| %>
+  <%= f.submit("Delete") %>
+<% end %>
