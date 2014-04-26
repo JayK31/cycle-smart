@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :routes
   end
 
+  get  "/session/new"  => "session#new"
+  post "/session"      => "session#create"
+  get  "/logout"       => "session#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
