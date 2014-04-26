@@ -36,6 +36,19 @@ class RoutesController < ApplicationController
     @route = Route.find(params[:id])
   end
 
+  def update
+    @user = User.find(params[:user_id])
+    @route = Route.find(params[:id])
+
+    @route.update(
+      start_point: params[:route][:start_point],
+      end_point: params[:route][:end_point],
+      description: params[:route][:description]
+      )
+
+    redirect_to user_route_path
+  end
+
   def destroy
     @user = User.find(params[:user_id])
     @route = Route.find(params[:id])
