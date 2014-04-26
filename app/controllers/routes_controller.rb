@@ -26,7 +26,7 @@ class RoutesController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @routes = Route.where(user_id: @user)
+    @route = Route.find(params[:id])
   end
 
   def edit
