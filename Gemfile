@@ -26,7 +26,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+<<<<<<< HEAD
+# Use ActiveModel has_secure_password
+=======
 # # Use ActiveModel has_secure_password
+>>>>>>> 937522501a067edaebc155c923861077274652d9
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
@@ -40,18 +44,18 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem "annotate"
-  gem "rails-erd"  
+  gem "rails-erd"
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   # automatically install/update your gem bundle when needed
-  gem 'guard-bundler', require: false  
+  gem 'guard-bundler', require: false
   # automatically run your specs when files are modified
-  gem 'guard-rspec', require: false  
+  gem 'guard-rspec', require: false
   # automatically check Ruby code style
-  gem 'guard-rubocop'  
+  gem 'guard-rubocop'
   # Mac OS X User Notifications for Guard
   gem 'terminal-notifier-guard'
   gem 'rspec'
@@ -61,3 +65,4 @@ group :development, :test do
   gem 'bcrypt', '~> 3.1.7'
 
 end
+
