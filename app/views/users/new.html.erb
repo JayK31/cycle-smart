@@ -2,7 +2,7 @@
 
 <!-- once there are validation, this will display errors when the user fails to login -->
 <% @user.errors.messages.each do |attr, message| %>
-  <p>WOMP! It looks like your <%= attr %> <%= message.join %>. Fix it, bro!</p>
+  <p>WOMP! It looks like your <%= attr %>  <%= message.join %>. Fix it, bro!</p>
 <% end %>
 
 
