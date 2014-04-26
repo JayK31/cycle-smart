@@ -1,0 +1,10 @@
+<h3>Hi <%= @user.name %></h3>
+<p>Here is your route:</p>
+
+ <p><strong>Starting Point:</strong></p><%= @route.start_point %>
+ <p><strong>End Point:</strong></p><%= @route.end_point %>
+ <p><strong>Safety Score:</strong></p><%= @route.safety_score %>
+ <p><strong>Description:</strong></p><%= @route.description %>
+
+ <p><%= link_to "Edit/Delete Bike Route", edit_user_route_path %></p>
+
