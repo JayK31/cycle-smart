@@ -11,16 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140426174736) do
+=======
+ActiveRecord::Schema.define(version: 20140426174930) do
+>>>>>>> 4ca7cd51514a75ce2518169d959b063623ee29f1
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "routes", force: true do |t|
     t.string   "start_point"
     t.string   "end_point"
     t.integer  "safety_score"
     t.text     "description"
+=======
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+>>>>>>> 4ca7cd51514a75ce2518169d959b063623ee29f1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
