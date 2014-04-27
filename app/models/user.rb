@@ -22,5 +22,4 @@ class User < ActiveRecord::Base
   # basic validation of password format
   validates_format_of :email, :with => /@/
   has_secure_password
-
 end
