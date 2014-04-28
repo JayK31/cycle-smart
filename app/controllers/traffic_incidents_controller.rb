@@ -1,8 +1,12 @@
-# class TrafficIncidentsController < ApplicationController
+class TrafficIncidentsController < ApplicationController
 
-#   def index
-#     TrafficIncidents.load
-#     @bikes_accidents = TrafficIncident.all
-#   end
+  def index
+  @traffic_incidents = TrafficIncident.all
 
-# end
+    respond_to do |format|
+      format.html
+      format.json { render :json => @traffic_incidents }
+    end
+  end
+
+end
