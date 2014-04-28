@@ -12,3 +12,4 @@ var marker = new google.maps.Marker({
 
 // To add the marker to the map, call setMap();
 marker.setMap(map);
+
