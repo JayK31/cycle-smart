@@ -1,35 +1,16 @@
-class TrafficIncident
+class TrafficIncident < ActiveRecord::Base
 
-  def self.load
+  def self.fetch
     responses = HTTParty.get('http://nypd.openscrape.com/data/collisions.json.gz')
-    # parsed_responses = JSON.parse(responses)
-    responses.map do |incident|
-      self.new(incident)
+    responses.map do |response|
+      traffic_incident = self.new(latitude: response[0], longitude: response[1])
+      if has_bike?(response)
+        traffic_incident.save 
+      end
     end
   end
 
-  def initialize(response)
-    @response = response
+  def self.has_bike?(response)
+    response[4..-1].flatten.include? 'bicycle'
   end
-
-  def has_bike?
-    @response[4..-1].flatten.include? 'bicycle'
-  end
-
-  def latitude
-    @response[0].to_f
-  end
-
-
-  def longitude
-    @response[1].to_f
-  end
-
-  def bike_accidents
-    self.select { |accident| accident.has_bike? }
-  end
-
 end
-
-
-# traffic_incidents.select --> use has_bike

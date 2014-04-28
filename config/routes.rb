@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :routes
   end
 
+  resources :traffic_incidents 
+
   get  "/session/new"  => "session#new"
   post "/session"      => "session#create"
   get  "/logout"       => "session#destroy"

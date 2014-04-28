@@ -23,6 +23,24 @@ function initialize(location){
     animation: google.maps.Animation.DROP
   });
 
+  $.ajax({
+    url: "/traffic_incidents",
+    method: "GET",
+    dataType: "json"
+  }).done(function(incidents) {
+    $.each(incidents, function(incident){
+      var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
+      console.log(incident_location)
+      var incident_marker = new google.maps.Marker({
+      position: incident_location,
+      map: map,
+      draggable: true,
+      animation: google.maps.Animation.DROP
+        });
+    });
+
+  });
+
 }
 
 
