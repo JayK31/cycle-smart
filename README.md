@@ -6,7 +6,7 @@ Cycle, the smart way.
 
 [ERD]()
 
-Team Members
+##Team Members
 1. Mike Beaujean
 2. Isaac Saqib
 3. Jason Kaye
