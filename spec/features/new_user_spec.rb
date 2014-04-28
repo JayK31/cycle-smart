@@ -12,6 +12,7 @@ describe "visiting the site" do
       fill_in 'Email', with: 'jay@jay.com'
       fill_in 'Password', with: 'password'
       click_on "Login"
+      expect( page ).to have_content "Jay"
     end
     it "allows a user to create an account" do
       visit root_path
@@ -25,5 +26,7 @@ describe "visiting the site" do
       expect( page ).to have_content 'Account successfully created!'
     end
   end
+  # describe "logging in" do
+
 end
 

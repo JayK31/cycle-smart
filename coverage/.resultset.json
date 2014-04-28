@@ -234,7 +234,6 @@
         1,
         null,
         1,
-        null,
         2,
         2,
         2,
@@ -244,20 +243,6 @@
         2,
         2,
         2,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/JayK/dev/wdi/cycle_smart/app/models/user.rb": [
@@ -421,6 +406,6 @@
         null
       ]
     },
-    "timestamp": 1398693858
+    "timestamp": 1398698478
   }
 }
