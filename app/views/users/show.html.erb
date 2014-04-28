@@ -1,5 +1,8 @@
 <h1>Hi <%= @user.name %></h1>
 
+  <div id="map-canvas">
+  </div>
+
 <%= link_to "See My Routes", user_routes_path(@user) %><br/>
 <%= link_to "Edit Your Account", edit_user_path(@user) %><br/>
 <%= link_to "Delete Your Account", user_path(@user), method: :delete %><br/>
