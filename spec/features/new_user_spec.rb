@@ -26,7 +26,14 @@ describe "visiting the site" do
       expect( page ).to have_content 'Account successfully created!'
     end
   end
-  # describe "logging in" do
-
+  describe "logging in" do
+    it "displays a map on the dashboard" do
+      visit root_path
+      fill_in 'Email', with: 'jay@jay.com'
+      fill_in 'Password', with: 'password'
+      click_on "Login"
+      expect( page ).to have_css('div#location_map')
+    end
+  end
 end
 

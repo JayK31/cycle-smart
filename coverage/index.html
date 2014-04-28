@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-04-28T11:21:18-04:00">2014-04-28T11:21:18-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-04-28T11:23:59-04:00">2014-04-28T11:23:59-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.92
+         0.98
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>3.3</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>12</td>
         <td>8</td>
         <td>4</td>
-        <td>0.7</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -306,8 +306,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="7">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">    @current_user ||= User.find_by(id: session[:user_id])</code>
         </li>
@@ -330,8 +330,8 @@
           <code class="ruby">  def logged_in?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
           
           <code class="ruby">    current_user.present?</code>
         </li>
@@ -444,8 +444,8 @@
           <code class="ruby">    # find the user by the given email from the form</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    user = User.find_by(email: params[:email])</code>
         </li>
@@ -456,8 +456,8 @@
           <code class="ruby">    # if we found the user and they gave us the right password</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">    if user &amp;&amp; user.authenticate(params[:password])</code>
         </li>
@@ -474,14 +474,14 @@
           <code class="ruby">      # the key to the flash hash can be anything, you can call it user_name, football, etc.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">      session[:user_id] = user.id</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to(&quot;/&quot;)</code>
         </li>
