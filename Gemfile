@@ -59,6 +59,7 @@ group :development, :test do
   gem 'jasmine'
   gem 'rubocop'
   gem 'bcrypt', '~> 3.1.7'
-
+  gem 'simplecov', '~> 0.7.1', :require => false
+  gem 'httparty'
 end
 
