@@ -1,7 +1,7 @@
 
 // 'initialize' function gets passed 'location' object which contains user location info
 function initialize(location){
-
+  console.log(location);
   // setting user latitude & longitude to currentLocation variable
   var currentLocation = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
 
@@ -18,7 +18,9 @@ function initialize(location){
   // sets a marker on the map for the user's current location
   var marker = new google.maps.Marker({
     position: currentLocation,
-    map: map
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP
   });
 
 }
@@ -28,5 +30,4 @@ $(document).ready(function(){
 // getting user location with HTML5 Geolocation location
 // passing it the name of a function - 'initialize'
   navigator.geolocation.getCurrentPosition(initialize);
-
 });

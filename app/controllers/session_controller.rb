@@ -12,7 +12,7 @@ class SessionController < ApplicationController
       # store user id in session
       # the key to the flash hash can be anything, you can call it user_name, football, etc.
       session[:user_id] = user.id
-      redirect_to("/")
+      redirect_to("/users/#{user.id}")
     else
       # rerender the login form
       render(:new)
