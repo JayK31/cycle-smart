@@ -1,4 +1,4 @@
-class TrafficIncident
+class TrafficIncidents < ActiveRecord::Base
 
   @@bike_accidents = []
 
@@ -48,5 +48,3 @@ end
   # end
 
 # traffic_incidents.select --> use has_bike
-
-incident.new(latitude: , longtitude: )
