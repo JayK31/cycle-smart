@@ -20,13 +20,14 @@ class TrafficIncident
     @response[0].to_f
   end
 
-  
-  # def longitude
-  # end
 
-  # def accidents
-  #   # from [4..-1]
-  # end
+  def longitude
+    @response[1].to_f
+  end
+
+  def bike_accidents
+    self.select { |accident| accident.has_bike? }
+  end
 
 end
 

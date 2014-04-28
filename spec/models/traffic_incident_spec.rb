@@ -12,11 +12,22 @@ describe TrafficIncident do
         expect( new_traffic_incident.latitude ).to eq 40.684626
       end
     end
+    describe "#longitude" do 
+      it "has longitude coords" do 
+        expect( new_traffic_incident.longitude ).to eq -73.938369
+      end
+    end
     describe ".load" do
       it "should load incidents" do
         incidents = TrafficIncident.load
         expect( incidents ).to be_a(Array)
         expect( incidents.first ).to be_a(TrafficIncident)
+      end
+    end
+    describe "#bike_accidents" do 
+      it "should select an accident if it an accident has bike" do
+        incidents = TrafficIncident.load
+        expect( incidents.bike_accidents ).to be_a(Array)
       end
     end
   end
