@@ -20,6 +20,7 @@ class TrafficIncident
     @response[0].to_f
   end
 
+  
   # def longitude
   # end
 
