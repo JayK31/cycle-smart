@@ -16,3 +16,7 @@ body {
 .signup {
   color: white;
 }
+
+#map-canvas {
+  height: 500px;
+}
