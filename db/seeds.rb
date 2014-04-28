@@ -11,3 +11,4 @@ User.delete_all
 user1 = User.create(name: "Jay", email: "jay@jay.com", password: "password", password_confirmation: "password")
 user2 = User.create(name: "Tom", email: "tom@tom.com", password: "password", password_confirmation: "password")
 user3 = User.create(name: "Mike", email: "mike@mike.com", password: "password", password_confirmation: "password")
+

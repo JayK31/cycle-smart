@@ -1,10 +1,23 @@
 class TrafficIncident
 
+  @@bike_accidents = []
+
+  def self.bike_accidents
+    @@bike_accidents
+  end
+
   def self.load
     responses = HTTParty.get('http://nypd.openscrape.com/data/collisions.json.gz')
     # parsed_responses = JSON.parse(responses)
-    responses.map do |incident|
-      self.new(incident)
+    responses.each do |incident|
+      individual_incident = self.new(incident)
+      self.new(latitude: self.latitude, longitude: self.longitude )
+      if individual_incident.has_bike?
+        individual_incident.save
+      end 
+      # if self.new(incident).has_bike?
+      #   @@bike_accidents << self 
+      # end
     end
   end
 
@@ -20,16 +33,20 @@ class TrafficIncident
     @response[0].to_f
   end
 
-
   def longitude
     @response[1].to_f
   end
 
-  def bike_accidents
-    self.select { |accident| accident.has_bike? }
-  end
 
 end
 
+  # def bicycle_accident
+  #   incidents = self.load
+  #   incidents.each do |incident|
+  #     @@bike_accidents << self if has_bike? 
+  #   end
+  # end
 
 # traffic_incidents.select --> use has_bike
+
+incident.new(latitude: , longtitude: )

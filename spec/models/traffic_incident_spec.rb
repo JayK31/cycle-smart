@@ -25,10 +25,9 @@ describe TrafficIncident do
       end
     end
     describe "#bike_accidents" do 
-      it "should select an accident if it an accident has bike" do
-        incidents = TrafficIncident.load
-        expect( incidents.bike_accidents ).to be_a(Array)
-      end
+      # it "should select an accident if it an accident involves a bike" do
+      #   incidents = TrafficIncident.load
+      # end
     end
   end
 end
