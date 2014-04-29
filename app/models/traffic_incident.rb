@@ -1,6 +1,7 @@
 class TrafficIncident < ActiveRecord::Base
 
   def self.fetch
+    # fetch data from NYC openscrape
     responses = HTTParty.get('http://nypd.openscrape.com/data/collisions.json.gz')
     # limit the reponses to approx 700
     limit_resp = responses[37000..-1]
