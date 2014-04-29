@@ -3,6 +3,13 @@
     <%= link_to "Home", root_path %>
     <%= link_to "Edit Your Account", edit_user_path(@user) %>
     <%= link_to "Delete Your Account", user_path(@user), method: :delete %>
+
+    <form>
+      Origin: <input id="directions-origin" type="text" name="fname"><br>
+      Destination: <input id="directions-destination" type="text" name="destination"><br>
+      <input id= "directions-trigger" type="submit" value="Submit">
+    </form>
+
     <h1>Hi <%= @user.name %></h1>
 
       <div id="map-canvas">

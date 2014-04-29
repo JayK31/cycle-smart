@@ -1,3 +1,5 @@
+var direction = new google.maps.DirectionsService();
+var map;
 
 // 'initialize' function gets passed 'location' object which contains user location info
 function initialize(location){
@@ -12,7 +14,7 @@ function initialize(location){
   };
 
   // map variable pointing to the "map-canvas" div in the HTML
-  var map = new google.maps.Map(document.getElementById("map-canvas"),
+  map = new google.maps.Map(document.getElementById("map-canvas"),
     mapOptions);
 
   // sets a marker on the map for the user's current location
