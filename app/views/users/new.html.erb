@@ -5,17 +5,20 @@
   <p>WOMP! It looks like your <%= attr %>  <%= message.join %>. Fix it, bro!</p>
 <% end %>
 
-
+<div class="signup">
 <!-- NEW USER SIGN UP FORM -->
-<%= form_for(@user) do |f| %>
+<p class="signup">
+  <%= form_for(@user) do |f| %>
   <%= f.label(:name) %>
-  <p><%= f.text_field(:name) %></p>
+  <%= f.text_field(:name) %>
   <%= f.label(:email) %>
-  <p><%= f.text_field(:email) %></p>
+  <%= f.text_field(:email) %>
   <!-- these input controls will obscure the password -->
   <%= f.label(:password) %>
-  <p><%= f.password_field(:password) %></p>
+  <%= f.password_field(:password) %>
   <%= f.label(:password_confirmation) %>
-  <p><%= f.password_field(:password_confirmation) %></p>
-  <p><%= f.submit "Sign Up" %></p>
+  <%= f.password_field(:password_confirmation) %>
+  <%= f.submit "Sign Up" %>
 <% end %>
+</p>
+</div>
