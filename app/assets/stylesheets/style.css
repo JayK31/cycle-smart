@@ -1,24 +1,105 @@
-h1 {
-  /*color: white;*/
+/*h1 {
+  color: white;
   font-family: Georgia;
 }
-body {
-  /*background-image:url('http://www.cyclelove.net/wp-content/uploads/2012/12/nyc_bike_project_1600-101.jpg');*/
-  background-color:white;
+*//*body {
+  background-image:url('http://www.cyclelove.net/wp-content/uploads/2012/12/nyc_bike_project_1600-101.jpg');
+  /*background-color:white;
   background-repeat:no-repeat;
+}*/
+
+/*.links {
+  text-align: center;
+  display: inline-block;
+}*/
+
+body {
+position: relative;
+ }
+
+.links {
+  color: red;
+  font-family: "Impact";
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid black;
+  transition: .2s all;
+  display: inline-block;
+ /* border-radius: 10px;*/
 }
 
 .login {
-  font-family: Georgia;
-  background-color: white;
+text-align: right;
+position: absolute;
+right: 170px;
+top: 100px;
+color: white;
+font-size: 20px;
 }
 
+.banner {
+  background-color: black;
+  height: 200px;
+  border-radius: 50px;
+  border: 10px solid black;
+
+
+}
+
+div a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  right: 80px;
+}
+
+div p {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  right: 120px;
+  /*margin: 5px;*/
+  margin-top: 10px;
+}
+
+.logo {
+  transition: .5s all;
+  color: white;
+  font-size: 90px;
+  font-family: "Impact";
+}
+
+ .logo:hover {
+  font-size: 100px;
+}
+
+div.signup {
+  width: 800px;
+  height: 800px;
+  background-color: black;
+  text-align: center;
+
+}
+
+p.signup {
+  text-align: center;
+
+}
+/*
 .signup {
   color: white;
 }
-
+*//*
 #map-canvas {
   height: 500px;
+}*/
+/*
+.banner {
+  width: 1590px;
+  height: 100px ;
+  background-color: black;
+  margin: 0;
+
 }
 
 #routes {
@@ -45,3 +126,4 @@ body {
   background-color: #D4D4DB;
 }
 
+*/
