@@ -8,7 +8,7 @@ class TrafficIncident < ActiveRecord::Base
         traffic_incident.save 
       end
     end
-  end
+  end 
 
   def self.has_bike?(response)
     response[4..-1].flatten.include? 'bicycle'
