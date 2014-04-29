@@ -4,7 +4,7 @@ describe "visiting the site" do
   describe "a new user visits the site" do
     it "says Welcome to CycleSmart" do
       visit root_path
-      expect( page ).to have_content "Welcome to CycleSmart"
+      expect( page ).to have_content "Get Started with CycleSmart!"
     end
     it "has a form to login" do
       login

@@ -14,26 +14,26 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-04-28T22:28:34-04:00">2014-04-28T22:28:34-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-04-29T10:08:30-04:00">2014-04-29T10:08:30-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.0%</span></span>
+    (<span class="covered_percent"><span class="yellow">88.1%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         624.92
+         9.43
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>21</b> files in total.
-    <b>125</b> relevant lines. 
-    <span class="green"><b>110</b> lines covered</span> and
+    <b>126</b> relevant lines. 
+    <span class="green"><b>111</b> lines covered</span> and
     <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -103,11 +103,11 @@
       <tr>
         <td class="strong"><a href="#57082628826ea910d1a2cec1f51cca566426c4fc" class="src_link" title="app/models/traffic_incident.rb">app/models/traffic_incident.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>9</td>
-        <td>9</td>
+        <td>20</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>13105.6</td>
+        <td>180.2</td>
       </tr>
       
       <tr>
@@ -1139,8 +1139,8 @@
     <h3>app/models/traffic_incident.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1166,79 +1166,103 @@
           <code class="ruby">  def self.fetch</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">    responses = HTTParty.get(&#39;http://nypd.openscrape.com/data/collisions.json.gz&#39;)</code>
+          
+          <code class="ruby">    # fetch data from NYC openscrape</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    responses.map do |response|</code>
+          <code class="ruby">    responses = HTTParty.get(&#39;http://nypd.openscrape.com/data/collisions.json.gz&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="37574" data-linenumber="6">
-          <span class="hits">37574</span>
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    # limit the reponses to approx 700</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    limit_resp = responses[37000..-1]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    # responses.map do |response|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    limit_resp.map do |response|</code>
+        </li>
+      
+        <li class="covered" data-hits="574" data-linenumber="10">
+          <span class="hits">574</span>
           
           <code class="ruby">      traffic_incident = self.new(latitude: response[0], longitude: response[1])</code>
         </li>
       
-        <li class="covered" data-hits="37574" data-linenumber="7">
-          <span class="hits">37574</span>
+        <li class="covered" data-hits="574" data-linenumber="11">
+          <span class="hits">574</span>
           
           <code class="ruby">      if has_bike?(response)</code>
         </li>
       
-        <li class="covered" data-hits="5222" data-linenumber="8">
-          <span class="hits">5222</span>
+        <li class="covered" data-hits="73" data-linenumber="12">
+          <span class="hits">73</span>
           
           <code class="ruby">        traffic_incident.save </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.has_bike?(response)</code>
         </li>
       
-        <li class="covered" data-hits="37575" data-linenumber="14">
-          <span class="hits">37575</span>
+        <li class="covered" data-hits="575" data-linenumber="18">
+          <span class="hits">575</span>
           
           <code class="ruby">    response[4..-1].flatten.include? &#39;bicycle&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
