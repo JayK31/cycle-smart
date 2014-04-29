@@ -55,7 +55,8 @@ function initialize(location){
         position: station_location,
         map: map,
         draggable: true,
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP,
+        icon: '/assets/citibike.jpeg'
      });
      station_marker.setMap(map);
     });
