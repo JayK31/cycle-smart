@@ -36,7 +36,7 @@ function initialize(location){
       var incident_marker = new google.maps.Marker({
         position: incident_location,
         map: map,
-        draggable: true,
+        draggable: false,
         animation: google.maps.Animation.DROP
         });
       // set incident market on the map
@@ -54,7 +54,7 @@ function initialize(location){
      var station_marker = new google.maps.Marker({
         position: station_location,
         map: map,
-        draggable: true,
+        draggable: false,
         animation: google.maps.Animation.DROP,
         icon: '/assets/citibike.jpeg'
      });
@@ -73,7 +73,7 @@ function initialize(location){
       var shop_marker = new google.maps.Marker({
         position: shop_location,
         map: map,
-        draggable: true,
+        draggable: false,
         animation: google.maps.Animation.DROP,
         icon: shop["icon"]
       });
