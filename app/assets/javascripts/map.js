@@ -62,6 +62,25 @@ function initialize(location){
     });
   });
 
+  $.ajax({
+    url: "/shop",
+    method: "GET",
+    dataType: "json"
+  }).done(function(shops) {
+    $.each(shops, function(index, shop) {
+      var shop_location = new google.maps.LatLng(
+        Number(shop["geometry"]["location"]["lat"]), Number(shop["geometry"]["location"]["lng"]));
+      var shop_marker = new google.maps.Marker({
+        position: shop_location,
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        icon: shop["icon"]
+      });
+      shop_marker.setMap(map)
+    });
+  });
+
 }
 
 

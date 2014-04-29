@@ -12,6 +12,3 @@ class ShopController < ApplicationController
 
 end
 
-
- # shops["results"]["geometry"]["location"]["lat"]
- #     shops["results"]["geometry"]["location"]["lng"]
