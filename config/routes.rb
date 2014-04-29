@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/session"      => "session#create"
   get  "/logout"       => "session#destroy"
   get "/station" => "station#index"
+  get "/shop" => "shop#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

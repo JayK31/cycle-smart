@@ -11,3 +11,7 @@ class ShopController < ApplicationController
   end
 
 end
+
+
+ # shops["results"]["geometry"]["location"]["lat"]
+ #     shops["results"]["geometry"]["location"]["lng"]
