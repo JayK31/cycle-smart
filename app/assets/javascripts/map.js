@@ -28,17 +28,20 @@ function initialize(location){
     method: "GET",
     dataType: "json"
   }).done(function(incidents) {
-    $.each(incidents, function(incident){
+    // fixed each method to include index
+    $.each(incidents, function(index, incident){
+      // debugger;
       var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
-      console.log(incident_location)
+      // debugger;
       var incident_marker = new google.maps.Marker({
       position: incident_location,
       map: map,
       draggable: true,
       animation: google.maps.Animation.DROP
         });
+      // set incident market on the map
+      incident_marker.setMap(map);
     });
-
   });
 
 }

@@ -4,9 +4,10 @@ class TrafficIncidentsController < ApplicationController
   @traffic_incidents = TrafficIncident.all
 
     respond_to do |format|
-      format.html
-      format.json { render :json => @traffic_incidents }
+      format.html {}
+      format.json { render json: @traffic_incidents }
     end
   end
 
 end
+
