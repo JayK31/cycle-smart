@@ -1,7 +1,7 @@
 class TrafficIncidentsController < ApplicationController
 
   def index
-  @traffic_incidents = TrafficIncident.all
+    @traffic_incidents = TrafficIncident.all
 
     respond_to do |format|
       format.html {}
