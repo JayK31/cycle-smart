@@ -34,13 +34,30 @@ function initialize(location){
       var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
       // debugger;
       var incident_marker = new google.maps.Marker({
-      position: incident_location,
-      map: map,
-      draggable: true,
-      animation: google.maps.Animation.DROP
+        position: incident_location,
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP
         });
       // set incident market on the map
       incident_marker.setMap(map);
+    });
+  });
+
+  $.ajax({
+    url: "/station",
+    method: "GET",
+    dataType: "json"
+  }).done(function(stations) {
+    $.each(stations, function(index, station) {
+      var station_location = new google.maps.LatLng(Number(station["latitude"]), Number(station["longitude"]));
+     var station_marker = new google.maps.Marker({
+        position: station_location,
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP
+     });
+     station_marker.setMap(map);
     });
   });
 

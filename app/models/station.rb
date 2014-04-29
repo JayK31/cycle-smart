@@ -7,3 +7,4 @@ class Station
   end
 
 end
+
