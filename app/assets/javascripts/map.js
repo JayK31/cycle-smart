@@ -49,12 +49,25 @@ function initialize(location){
       var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
       // debugger;
 
+      var contentIncidentMarker = '<div id="incidentContent">' +
+      '<strong>Incident Description: </strong>' +
+      '<p>' + incident.description + '</p>' +
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentIncidentMarker
+      });
+
       var incident_marker = new google.maps.Marker({
         position: incident_location,
         map: map,
         draggable: false,
         animation: google.maps.Animation.DROP
         });
+
+      google.maps.event.addListener(incident_marker, 'click', function() {
+        infowindow.open(map,incident_marker);
+      });
       // set incident market on the map
       incident_marker.setMap(map);
     });
