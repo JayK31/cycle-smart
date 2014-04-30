@@ -12,6 +12,23 @@
       <input id= "directions-trigger" type="submit" value="Submit">
     </form>
 
+    <div id= "create-route-button">
+      <h3>Create a route: </h3>
+        <%= form_for([@user, @route]) do |f| %>
+        <%= f.label :start_point %>
+        <%= f.text_field :start_point %>
+        <%= f.label :end_point %>
+        <%= f.text_field :end_point %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <%= f.submit %>
+          <% end %>
+    </div>
+    <form id="form-route">
+
+
+
+
     <h1>Hi <%= @user.name %></h1>
     <center><button id="citibike">CitiBike Stations</button></center><br>
 

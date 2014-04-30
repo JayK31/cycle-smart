@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @routes = Route.all
+    @route = Route.new
   end
 
   #get /users/:id/edit --> send to form
