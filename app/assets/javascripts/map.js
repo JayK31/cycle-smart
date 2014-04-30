@@ -1,5 +1,8 @@
 var direction = new google.maps.DirectionsService();
 var map;
+var station_markers_array = [];
+var accident_markers_array = [];
+var bikeshop_markers_array = [];
 
 // 'initialize' function gets passed 'location' object which contains user location info
 function initialize(location){
@@ -60,7 +63,7 @@ function initialize(location){
 
       var incident_marker = new google.maps.Marker({
         position: incident_location,
-        map: map,
+        // map: map,
         draggable: false,
         animation: google.maps.Animation.DROP
         });
@@ -70,7 +73,8 @@ function initialize(location){
       });
       // set incident market on the map
 
-      incident_marker.setMap(map);
+      accident_markers_array.push(incident_marker);
+
     });
   });
 
@@ -83,13 +87,15 @@ function initialize(location){
       var station_location = new google.maps.LatLng(Number(station["latitude"]), Number(station["longitude"]));
      var station_marker = new google.maps.Marker({
         position: station_location,
-        map: map,
+        // map: map,
         draggable: false,
         animation: google.maps.Animation.DROP,
-        icon: '/assets/citibike.jpeg'
+        icon: '/assets/blue-dot-button-small.gif'
      });
 
-     station_marker.setMap(map).hide()
+     // station_marker.setMap(map)
+     station_markers_array.push(station_marker);
+
     });
   });
 
@@ -102,22 +108,22 @@ function initialize(location){
       var shop_location = new google.maps.LatLng(
         Number(shop["geometry"]["location"]["lat"]), Number(shop["geometry"]["location"]["lng"]));
 
-      var contentShopMarker = '<div id="shop-marker">' +
-      '<div id="shop-marker-name">' +
-      '<h4>' + shop["name"] + '</h4>' +
-      '</div>' +
-      '<div id="shop-marker-address">' +
-      '<p>' + shop["formatted_address"] + '</p>' +
-      '</div>' +
-      '<div id="shop-marker-info">' +
-      '<p>' + '<strong>Open Now?: </strong>' + shop["opening_hours"]["open_now"] +
-      '<strong> Rating: </strong>' + shop["rating"] + '</p>' +
-      '</div>' +
-      '</div>';
+      // var contentShopMarker = '<div id="shop-marker">' +
+      // '<div id="shop-marker-name">' +
+      // '<h4>' + shop["name"] + '</h4>' +
+      // '</div>' +
+      // '<div id="shop-marker-address">' +
+      // '<p>' + shop["formatted_address"] + '</p>' +
+      // '</div>' +
+      // '<div id="shop-marker-info">' +
+      // '<p>' + '<strong>Open Now?: </strong>' + shop["opening_hours"]["open_now"] +
+      // '<strong> Rating: </strong>' + shop["rating"] + '</p>' +
+      // '</div>' +
+      // '</div>';
 
-      var infowindow = new google.maps.InfoWindow({
-        content: contentShopMarker
-      });
+      // var infowindow = new google.maps.InfoWindow({
+      //   content: contentShopMarker
+      // });
 
       var shop_marker = new google.maps.Marker({
         position: shop_location,
@@ -126,15 +132,14 @@ function initialize(location){
         animation: google.maps.Animation.DROP,
         icon: shop["icon"]
       });
+      bikeshop_markers_array.push(shop_marker);
 
-      google.maps.event.addListener(shop_marker, 'click', function() {
-        infowindow.open(map,shop_marker);
-      });
-
-      shop_marker.setMap(map).hide();
-
+      // google.maps.event.addListener(shop_marker, 'click', function() {
+      //   infowindow.open(map,shop_marker);
+      // });
     });
   });
+
 
 }
 
@@ -143,4 +148,19 @@ $(document).ready(function(){
 // getting user location with HTML5 Geolocation location
 // passing it the name of a function - 'initialize'
   navigator.geolocation.getCurrentPosition(initialize);
+  $("#citibike").on("click", function() {
+    $.each(station_markers_array, function(index, marker) {
+      marker.setMap(map);
+    });
+  })
+  $("#accidents").on("click", function() {
+    $.each(accident_markers_array, function(index, marker) {
+      marker.setMap(map);
+    });
+  })
+  $("#bikeshops").on("click", function() {
+    $.each(bikeshop_markers_array, function(index, marker) {
+      marker.setMap(map);
+    });
+  })
 });
