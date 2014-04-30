@@ -1,0 +1,18 @@
+.links {
+  color: white;
+  font-family: "Impact";
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid black;
+  transition: .5s all;
+  display: inline-block;
+ /* border-radius: 10px;*/
+}
+
+
+.links:hover {
+  font-size: 70px;
+
+}
+
+

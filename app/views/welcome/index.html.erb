@@ -1,27 +1,34 @@
-<body>
-<% if logged_in? %>
+
+<body id="welcome">
+
+<section id="ifloggedin">
+  <% if logged_in? %>
     <%= current_user.name %>
     <%= link_to "Your Account", user_path(current_user), class: "links" %>
     <!-- use current_user here because we don't have access @user -->
      <%= link_to "See My Routes", user_routes_path(current_user), class: "links" %>
-    <a class="links" href="/logout"> Logout</a>
-</div>
-<% else %>
+        <a class="links" href="/logout"> Logout</a>
+          <div class="footer">
+            <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
+                CycleSmart and the WDI Project are registered trademarks of WDI Media, Inc.</p>
+          </div>
+</section>
+    <% else %>
     <!-- A form_tag instead of form_for because there is no model for sessions,
       send post request to /session/create in session controller -->
-    <div class="banner">
-<img id="cyclerlogo" src="http://i57.tinypic.com/11gsgo1.png">
-      <div class="loginform">
-      <%= form_tag("/session", method: "post") do %>
-        <%= label_tag(:email) %>
-        <%= text_field_tag(:email) %>
-        <%= label_tag(:password) %>
-        <%= password_field_tag(:password) %>
-        <%= submit_tag("Login") %><br>
-      </div>
-      <% end %>
-
-<h1 class="logo"> Welcome to </h1>
+<div class="banner">
+  <img id="cyclerlogo" src="http://i57.tinypic.com/11gsgo1.png">
+        <div class="loginform">
+          <%= form_tag("/session", method: "post") do %>
+            <%= label_tag(:email) %>
+            <%= text_field_tag(:email) %>
+            <%= label_tag(:password) %>
+            <%= password_field_tag(:password) %>
+            <%= submit_tag("Login") %><br>
+            <% end %>
+        </div>
+          <h1 class="logo"> Welcome to </h1>
+  </div>
 
 <!-- once there are validation, this will display errors when the user fails to login -->
 <% @user.errors.messages.each do |attr, message| %>
@@ -42,28 +49,11 @@
     <br>
         <%= f.submit "Sign Up", class: "button" %>
   </div>
+  <% end %>
 <% end %>
 
-<div class="footer">
-  <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
-CycleSmart and the WDI Project are registered trademarks of WDI Media, Inc.</p>
-</div>
-
-
-
-
-
-
-
-
-<% end %>
+      <div class="footer">
+            <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
+                CycleSmart and the WDI Project are registered trademarks of WDI Media, Inc.</p>
+      </div>
 </body>
-<!--   <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
-CycleSmart is a registered trademark of WDI, Inc. </p> -->
-
-
-<!-- <p class="footer"> Hello </p> -->
-  <!-- <img class="bikepic1" src="http://www.nycbikemaps.com/wp-content/uploads/2007/01/Manhattan-Bike-Lane-DSC_0488-750x388.jpg">
-  <img class="bikepic2" src="http://www.nycbikemaps.com/wp-content/uploads/2007/01/Manhattan-Bike-Lane-DSC_0473-750x388.jpg">
-  <img class="bikepic3" src="http://www.nycbikemaps.com/wp-content/uploads/2007/01/BIcycle-Parking-Chelsea-2013-04-18-17.58.47-750x388.jpg">
- -->
