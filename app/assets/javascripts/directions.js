@@ -1,7 +1,7 @@
 function getDirections(){
   return {
-      origin: $("#directions-origin").val(),
-      destination: $("#directions-destination").val(),
+      origin: autocompleteOrigin.getPlace().formatted_address,
+      destination: autocompleteDestination.getPlace().formatted_address,
       provideRouteAlternatives: false,
       travelMode: google.maps.TravelMode.BICYCLING,
       unitSystem: google.maps.UnitSystem.IMPERIAL
