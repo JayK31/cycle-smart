@@ -6,6 +6,7 @@
 
     <div id = "directions-button">
     </div>
+
     <form id = "form-directions">
       Origin: <input id="directions-origin" type="text" name="fname"><br>
       Destination: <input id="directions-destination" type="text" name="destination"><br>
@@ -13,18 +14,13 @@
     </form>
 
     <div id= "create-route-button">
-      <h3>Create a route: </h3>
-        <%= form_for([@user, @route]) do |f| %>
-        <%= f.label :start_point %>
-        <%= f.text_field :start_point %>
-        <%= f.label :end_point %>
-        <%= f.text_field :end_point %>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-        <%= f.submit %>
-          <% end %>
     </div>
     <form id="form-route">
+      Start: <input id="route-start" type="text" name="startname"><br>
+      End: <input id="route-end" type="text" name="endname">
+      <br>
+      <input id="route-trigger" type="submit" value="Submit">
+    </form>
 
 
 
