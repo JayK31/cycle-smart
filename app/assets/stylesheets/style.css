@@ -53,14 +53,14 @@ div a {
   right: 80px;
 }
 
-div p {
+/*div p {
   color: white;
   font-size: 20px;
   position: relative;
-  right: 120px;
+  right: 120px;*/
   /*margin: 5px;*/
-  margin-top: 10px;
-}
+/*  margin-top: 10px;
+}*/
 
 .logo {
   transition: .5s all;
