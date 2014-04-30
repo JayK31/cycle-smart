@@ -30,7 +30,8 @@ function initialize(location){
     position: currentLocation,
     map: map,
     draggable: true,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
+    icon: "/assets/home-icon.png"
   });
 
   google.maps.event.addListener(marker, 'click', function() {
@@ -47,6 +48,7 @@ function initialize(location){
       // debugger;
       var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
       // debugger;
+
       var incident_marker = new google.maps.Marker({
         position: incident_location,
         map: map,
@@ -93,7 +95,7 @@ function initialize(location){
       '<p>' + shop["formatted_address"] + '</p>' +
       '</div>' +
       '<div id="shop-marker-info">' +
-      '<p>' + '<strong>Open: </strong>' + shop["opening_hours"]["open_now"] +
+      '<p>' + '<strong>Open Now?: </strong>' + shop["opening_hours"]["open_now"] +
       '<strong> Rating: </strong>' + shop["rating"] + '</p>' +
       '</div>' +
       '</div>';
