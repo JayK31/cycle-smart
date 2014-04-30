@@ -15,7 +15,12 @@
 
 body {
 position: relative;
+background-image: url("http://www.nycbikemaps.com/wp-content/uploads/2007/01/Manhattan-Bike-Lane-DSC_0488.jpg");
+background-repeat: no-repeat;
+background-size: cover;
  }
+
+/*welcome page if not logged in */
 
 .links {
   color: red;
@@ -28,23 +33,6 @@ position: relative;
  /* border-radius: 10px;*/
 }
 
-.login {
-text-align: right;
-position: absolute;
-right: 170px;
-top: 100px;
-color: white;
-font-size: 20px;
-}
-
-.banner {
-  background-color: black;
-  height: 200px;
-  border-radius: 50px;
-  border: 10px solid black;
-
-
-}
 
 div a {
   color: white;
@@ -53,25 +41,15 @@ div a {
   right: 80px;
 }
 
-div p {
+/*div p {
   color: white;
   font-size: 20px;
   position: relative;
-  right: 120px;
+  right: 120px;*/
   /*margin: 5px;*/
-  margin-top: 10px;
-}
+/*  margin-top: 10px;
+}*/
 
-.logo {
-  transition: .5s all;
-  color: white;
-  font-size: 90px;
-  font-family: "Impact";
-}
-
- .logo:hover {
-  font-size: 100px;
-}
 
 div.signup {
   width: 800px;
@@ -94,15 +72,6 @@ p.signup {
   height: 500px;
 }
 
-/*
-.banner {
-  width: 1590px;
-  height: 100px ;
-  background-color: black;
-  margin: 0;
-}*/
-
-/*test comment for JK*/
 
 #routes {
   position: inline;

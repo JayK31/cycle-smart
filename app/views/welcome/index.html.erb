@@ -1,5 +1,4 @@
-
-<div id="wrapper">
+<body>
 <% if logged_in? %>
     <%= current_user.name %>
     <%= link_to "Your Account", user_path(current_user), class: "links" %>
@@ -11,32 +10,26 @@
     <!-- A form_tag instead of form_for because there is no model for sessions,
       send post request to /session/create in session controller -->
     <div class="banner">
-<img id="cyclerlogo" src="http://i60.tinypic.com/xcna0g.jpg"><em> <!-- <h1 class="logo"> Cycle Smart </h1> </em> -->
-
-      <div class="login">
+<img id="cyclerlogo" src="http://i57.tinypic.com/11gsgo1.png">
+      <div class="loginform">
       <%= form_tag("/session", method: "post") do %>
-        <div class="email"><%= label_tag(:email) %></div>
+        <%= label_tag(:email) %>
         <%= text_field_tag(:email) %>
-        <div class="password"><%= label_tag(:password) %></div>
+        <%= label_tag(:password) %>
         <%= password_field_tag(:password) %>
         <%= submit_tag("Login") %><br>
-        <em><p class="notregistered"> Not yet registered? </p></em>
-        <a class="getstarted" href="/users/new">Get Started with CycleSmart!</a>
-
-      <% end %>
       </div>
-    </div>
+      <% end %>
 
-    <h1 class="question"> Want to bike smarter? Create an Account Today</h1>
+<h1 class="logo"> Welcome to </h1>
 
 <!-- once there are validation, this will display errors when the user fails to login -->
 <% @user.errors.messages.each do |attr, message| %>
   <p>WOMP! It looks like your <%= attr %>  <%= message.join %>. Fix it, bro!</p>
 <% end %>
 
-<div class="signup">
 <!-- NEW USER SIGN UP FORM -->
-  <p class="signup">
+  <div class="signupform">
     <%= form_for(@user) do |f| %>
     <%= f.text_field :name, :placeholder => "Your First Name", class: "signup_name"  %><br>
     <%= f.text_field :email, :placeholder => "Your Email Address", class: "signup_email" %>
@@ -46,47 +39,28 @@
     <br>
     <%= f.password_field :password_confirmation, :placeholder => "Re-Enter Password", class: "signup_passwordconf" %>
     <br>
-    <%= f.submit "Sign Up" %>
-
-    <div class="infobox">
-      <h1 class="infotext"> What we do </h1>
-    </div>
-
-  </p>
-</div>
+    <br>
+        <%= f.submit "Sign Up", class: "button" %>
+  </div>
 <% end %>
 
-
-
-
-
-
-
-
-<% end %>
 <div class="footer">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
   <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
-CycleSmart is a registered trademark of WDI, Inc. </p>
+CycleSmart and the WDI Project are registered trademarks of WDI Media, Inc.</p>
 </div>
+
+
+
+
+
+
+
+
+<% end %>
+</body>
+<!--   <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
+CycleSmart is a registered trademark of WDI, Inc. </p> -->
+
 
 <!-- <p class="footer"> Hello </p> -->
   <!-- <img class="bikepic1" src="http://www.nycbikemaps.com/wp-content/uploads/2007/01/Manhattan-Bike-Lane-DSC_0488-750x388.jpg">
