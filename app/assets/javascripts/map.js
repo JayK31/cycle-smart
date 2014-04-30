@@ -34,13 +34,50 @@ function initialize(location){
       var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
       // debugger;
       var incident_marker = new google.maps.Marker({
-      position: incident_location,
-      map: map,
-      draggable: true,
-      animation: google.maps.Animation.DROP
+        position: incident_location,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
         });
       // set incident market on the map
       incident_marker.setMap(map);
+    });
+  });
+
+  $.ajax({
+    url: "/station",
+    method: "GET",
+    dataType: "json"
+  }).done(function(stations) {
+    $.each(stations, function(index, station) {
+      var station_location = new google.maps.LatLng(Number(station["latitude"]), Number(station["longitude"]));
+     var station_marker = new google.maps.Marker({
+        position: station_location,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP,
+        icon: '/assets/citibike.jpeg'
+     });
+     station_marker.setMap(map);
+    });
+  });
+
+  $.ajax({
+    url: "/shop",
+    method: "GET",
+    dataType: "json"
+  }).done(function(shops) {
+    $.each(shops, function(index, shop) {
+      var shop_location = new google.maps.LatLng(
+        Number(shop["geometry"]["location"]["lat"]), Number(shop["geometry"]["location"]["lng"]));
+      var shop_marker = new google.maps.Marker({
+        position: shop_location,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP,
+        icon: shop["icon"]
+      });
+      shop_marker.setMap(map)
     });
   });
 
