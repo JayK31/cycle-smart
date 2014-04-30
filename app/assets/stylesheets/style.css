@@ -108,19 +108,14 @@ p.signup {
   position: inline;
   height: 600px;
   width: 500px;
-  border-style: solid;
   float: left;
-  background-color: #99CCFF;
   margin: auto;
 }
 
 #directions {
   position: inline;
-  height: 600px;
   width: 500px;
-  border-style: solid;
   float: right;
-  background-color: #99CCFF;
   margin: auto;
 }
 
