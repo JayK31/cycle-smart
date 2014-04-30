@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # POST to users/new 
+  # POST to users/new
   def create
       #strong params to create new user
       @user = User.new(user_params)
@@ -27,9 +27,10 @@ class UsersController < ApplicationController
   # get /users/:id
   def show
     @user = User.find(params[:id])
+    @routes = Route.all
   end
 
-  #get /users/:id/edit --> send to form 
+  #get /users/:id/edit --> send to form
   #form will route to users#update
   def edit
     # find the user we want to edit by id

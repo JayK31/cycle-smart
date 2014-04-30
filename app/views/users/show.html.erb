@@ -1,9 +1,8 @@
 <body>
-  <div id="user-wrapper">
-    <%= link_to "Home", root_path %>
-    <%= link_to "Edit Your Account", edit_user_path(@user) %>
-    <%= link_to "Delete Your Account", user_path(@user), method: :delete %>
-    <h1>Hi <%= @user.name %></h1>
+    <%= link_to "Home", root_path, class: "links" %>
+    <%= link_to "Edit Your Account", edit_user_path(@user), class: "links" %>
+    <%= link_to "Delete Your Account", user_path(@user), method: :delete, class: "links" %>
+    <h1 class="hi"> Welcome <%= @user.name %> !</h1>
 
       <div id="map-canvas">
       </div>
@@ -12,6 +11,16 @@
     <div id="routes">
       <h2><center> My Routes </center></h2>
       <%= link_to "See My Routes", user_routes_path(@user) %><br/>
+        <ul>
+    <% @routes.each do |route| %>
+        <li>
+          <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
+            <%= route.start_point %> to <%= route.end_point %>
+          </a>
+        </li>
+    <% end %>
+  </ul>
+
     </div>
     <div id = "directions">
       <h2><center> Directions </center></h2>
