@@ -69,6 +69,7 @@ function initialize(location){
         infowindow.open(map,incident_marker);
       });
       // set incident market on the map
+
       incident_marker.setMap(map);
     });
   });
@@ -87,6 +88,7 @@ function initialize(location){
         animation: google.maps.Animation.DROP,
         icon: '/assets/citibike.jpeg'
      });
+
      station_marker.setMap(map).hide()
     });
   });
