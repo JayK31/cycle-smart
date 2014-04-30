@@ -74,7 +74,7 @@ function initialize(location){
         animation: google.maps.Animation.DROP,
         icon: '/assets/citibike.jpeg'
      });
-     station_marker.setMap(map);
+     station_marker.setMap(map).hide()
     });
   });
 
@@ -116,7 +116,8 @@ function initialize(location){
         infowindow.open(map,shop_marker);
       });
 
-      shop_marker.setMap(map)
+      shop_marker.setMap(map).hide();
+
     });
   });
 

@@ -7,7 +7,7 @@ class TrafficIncident < ActiveRecord::Base
     limit_resp = responses[37000..-1]
     # responses.map do |response|
     limit_resp.map do |response|
-      traffic_incident = self.new(latitude: response[0], longitude: response[1])
+      traffic_incident = self.new(latitude: response[0], longitude: response[1], description: description(response))
       if has_bike?(response)
         traffic_incident.save 
       end
@@ -17,4 +17,14 @@ class TrafficIncident < ActiveRecord::Base
   def self.has_bike?(response)
     response[4..-1].flatten.include? 'bicycle'
   end
+
+  def self.description(response)
+    strings_arr = []
+    find_strings = response[4..-1].flatten
+    find_strings.each do |string|
+      strings_arr << string if string.class == String
+    end
+    return strings_arr.join(' ')
+  end
+
 end
