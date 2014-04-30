@@ -140,19 +140,23 @@ function initialize(location){
     });
   });
 
-
 }
 
 
 $(document).ready(function(){
 // getting user location with HTML5 Geolocation location
 // passing it the name of a function - 'initialize'
+
+
   navigator.geolocation.getCurrentPosition(initialize);
+
   $("#citibike").on("click", function() {
     $.each(station_markers_array, function(index, marker) {
       marker.setMap(map);
     });
   })
+
+
   $("#accidents").on("click", function() {
     $.each(accident_markers_array, function(index, marker) {
       marker.setMap(map);
