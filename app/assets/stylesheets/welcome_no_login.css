@@ -1,28 +1,57 @@
 
 .banner {
-  background-color: white;
-  height: 200px;
-  border-radius: 50px;
-  border: 10px solid black;
-
+  background-color: transparent;
+  height: 150px;
+  width: 1420px;
+  position: absolute;
+  right: 0px;
+  top: -20px;
+  border: 5px dotted black;
+  border-radius: 5px;
 
 }
 
 img#cyclerlogo {
   position: absolute;
   left: 57px;
-  height: 200px;
+  height: 150px;
+  border: 5px solid black;
 
 }
 
 
-.login { /* login form */
-text-align: right;
-position: absolute;
-right: 170px;
-top: 100px;
-color: black;
-font-size: 20px;
+.loginform { /* login form */
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.signupform {
+  display: inline-block;
+  position: absolute;
+  top: 350px;
+  left: 30px;
+
+}
+
+.signup_name {
+  font-size: 30px;
+}
+
+.signup_email {
+  font-size: 30px;
+
+}
+
+.signup_password {
+  font-size: 30px;
+
+}
+
+.signup_passwordconf {
+  font-size: 30px;
+
 }
 
 
@@ -40,5 +69,15 @@ a.getstarted {
 
 .footertext {
   color: black;
+
+}
+
+.button {
+  color: red;
+  background-color: white;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 40px;
 
 }

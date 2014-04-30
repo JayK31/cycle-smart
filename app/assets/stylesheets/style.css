@@ -15,6 +15,9 @@
 
 body {
 position: relative;
+background-image: url("http://www.nycbikemaps.com/wp-content/uploads/2007/01/Manhattan-Bike-Lane-DSC_0488.jpg");
+background-repeat: no-repeat;
+background-size: cover;
  }
 
 /*welcome page if not logged in */
