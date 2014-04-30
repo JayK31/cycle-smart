@@ -17,12 +17,24 @@ function initialize(location){
   map = new google.maps.Map(document.getElementById("map-canvas"),
     mapOptions);
 
+  var contentHomeMarker = '<div id="home-marker">' +
+  '<h4>You are here!</h4>' +
+  '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: contentHomeMarker
+  });
+
   // sets a marker on the map for the user's current location
   var marker = new google.maps.Marker({
     position: currentLocation,
     map: map,
     draggable: true,
     animation: google.maps.Animation.DROP
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
   });
 
   $.ajax({
@@ -72,6 +84,24 @@ function initialize(location){
     $.each(shops, function(index, shop) {
       var shop_location = new google.maps.LatLng(
         Number(shop["geometry"]["location"]["lat"]), Number(shop["geometry"]["location"]["lng"]));
+
+      var contentShopMarker = '<div id="shop-marker">' +
+      '<div id="shop-marker-name">' +
+      '<h4>' + shop["name"] + '</h4>' +
+      '</div>' +
+      '<div id="shop-marker-address">' +
+      '<p>' + shop["formatted_address"] + '</p>' +
+      '</div>' +
+      '<div id="shop-marker-info">' +
+      '<p>' + '<strong>Open: </strong>' + shop["opening_hours"]["open_now"] +
+      '<strong> Rating: </strong>' + shop["rating"] + '</p>' +
+      '</div>' +
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentShopMarker
+      });
+
       var shop_marker = new google.maps.Marker({
         position: shop_location,
         map: map,
@@ -79,6 +109,11 @@ function initialize(location){
         animation: google.maps.Animation.DROP,
         icon: shop["icon"]
       });
+
+      google.maps.event.addListener(shop_marker, 'click', function() {
+        infowindow.open(map,shop_marker);
+      });
+
       shop_marker.setMap(map)
     });
   });
