@@ -23,6 +23,8 @@
   left: 10px;
   position: absolute;
   border-radius: 10px;
+  overflow:scroll
+
 }
 
 #directions {
