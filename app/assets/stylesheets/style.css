@@ -1,6 +1,6 @@
 
 
-body {
+#welcome {
 position: relative;
 background-image: url("http://www.nycbikemaps.com/wp-content/uploads/2007/01/Manhattan-Bike-Lane-DSC_0488.jpg");
 background-repeat: no-repeat;
@@ -8,31 +8,4 @@ background-size: cover;
  }
 
 
-
-
-
-
-
-
-
-
-#map-canvas {
-  height: 500px;
-}
-
-
-#routes {
-  position: inline;
-  height: 600px;
-  width: 500px;
-  float: left;
-  margin: auto;
-}
-
-#directions {
-  position: inline;
-  width: 500px;
-  float: right;
-  margin: auto;
-}
 

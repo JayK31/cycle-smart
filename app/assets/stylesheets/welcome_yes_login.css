@@ -16,7 +16,8 @@
 }
 
 
-#ifloggedin {
-  background-image: url("http://www.coolhdbackground.com/wp-content/uploads/2013/12/Vintage-Bicycle-Photography.jpg");
-
+/*#ifloggedin {
+  background-image: url("https://www.ebicycles.com/bicycle-tools/images/road-bike-classic.gif?1310180857");
+  background-size: cover;
 }
+*/

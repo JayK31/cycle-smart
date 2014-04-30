@@ -1,0 +1,53 @@
+#user-wrapper {
+  position: relative;
+  background-image: url("http://i59.tinypic.com/o107mh.jpg");
+  background-repeat: no-repeat;
+  background-size: 2000px 1000px;
+}
+
+#map-canvas {
+  height: 510px;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+#routes {
+  background-color: #91BDFF;
+  height: 500px;
+  width: 400px;
+  border: 10px dotted white;
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+#directions {
+  right: 10px;
+  position: absolute;
+  background-color: #91BDFF;
+  border: 10px dotted white;
+  height: 500px;
+  width: 400px;
+  bottom: 10px;
+  border-radius: 10px;
+  /*float: right;*/
+  /*margin: 0 auto;*/
+  /*position: absolute;*/
+
+}
+
+#routestext {
+  color: white;
+  text-decoration: underline;
+
+
+}
+
+#directionstext {
+  color: white;
+  text-decoration: underline;
+
+}
