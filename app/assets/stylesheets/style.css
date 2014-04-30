@@ -1,17 +1,4 @@
-/*h1 {
-  color: white;
-  font-family: Georgia;
-}
-*//*body {
-  background-image:url('http://www.cyclelove.net/wp-content/uploads/2012/12/nyc_bike_project_1600-101.jpg');
-  /*background-color:white;
-  background-repeat:no-repeat;
-}*/
 
-/*.links {
-  text-align: center;
-  display: inline-block;
-}*/
 
 body {
 position: relative;
@@ -20,53 +7,14 @@ background-repeat: no-repeat;
 background-size: cover;
  }
 
-/*welcome page if not logged in */
-
-.links {
-  color: red;
-  font-family: "Impact";
-  text-decoration: none;
-  padding: 5px;
-  border: 2px solid black;
-  transition: .2s all;
-  display: inline-block;
- /* border-radius: 10px;*/
-}
 
 
-div a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  right: 80px;
-}
-
-/*div p {
-  color: white;
-  font-size: 20px;
-  position: relative;
-  right: 120px;*/
-  /*margin: 5px;*/
-/*  margin-top: 10px;
-}*/
 
 
-div.signup {
-  width: 800px;
-  height: 800px;
-  background-color: black;
-  position: relative;
 
-}
 
-p.signup {
-  text-align: center;
 
-}
 
-.signup {
-  color: white;
-}
 
 #map-canvas {
   height: 500px;

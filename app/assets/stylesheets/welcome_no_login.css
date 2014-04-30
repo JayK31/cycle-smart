@@ -3,9 +3,6 @@
   background-color: #333333;
   height: 170px;
   width: 1220px;
-/*  position: absolute;
-  right: 100px;
-  top: -20px;*/
   margin: 0 auto;
   border: 5px solid white ;
   border-radius: 20px;
@@ -17,7 +14,6 @@ img#cyclerlogo {
   left: 444px;
   top: 1px;
   height: 200px;
-  border: 1px solid #333333;
   border-radius: 5px;
 
 }
@@ -86,9 +82,6 @@ a.getstarted {
 }
 
 .logo {
-/*  position: absolute;
-  left: 10px;
-  top: 10px;*/
   color: white;
   font-family: "Kharnorric";
   font-size: 40px;

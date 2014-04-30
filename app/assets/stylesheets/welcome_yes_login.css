@@ -1,0 +1,22 @@
+.links {
+  color: white;
+  font-family: "Impact";
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid black;
+  transition: .5s all;
+  display: inline-block;
+ /* border-radius: 10px;*/
+}
+
+
+.links:hover {
+  font-size: 70px;
+
+}
+
+
+#ifloggedin {
+  background-image: url("http://www.coolhdbackground.com/wp-content/uploads/2013/12/Vintage-Bicycle-Photography.jpg");
+
+}
