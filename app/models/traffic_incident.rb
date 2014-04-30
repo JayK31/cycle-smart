@@ -10,7 +10,6 @@ class TrafficIncident < ActiveRecord::Base
       traffic_incident = self.new(latitude: response[0], longitude: response[1], description: description(response))
       if has_bike?(response)
         traffic_incident.save 
-        description(response)
       end
     end
   end 
