@@ -1,0 +1,44 @@
+
+.banner {
+  background-color: white;
+  height: 200px;
+  border-radius: 50px;
+  border: 10px solid black;
+
+
+}
+
+img#cyclerlogo {
+  position: absolute;
+  left: 57px;
+  height: 200px;
+
+}
+
+
+.login { /* login form */
+text-align: right;
+position: absolute;
+right: 170px;
+top: 100px;
+color: black;
+font-size: 20px;
+}
+
+
+p.notregistered {
+  color: black;
+
+
+}
+
+a.getstarted {
+  color: black;
+
+
+}
+
+.footertext {
+  color: black;
+
+}

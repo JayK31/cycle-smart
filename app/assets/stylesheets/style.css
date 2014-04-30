@@ -17,6 +17,8 @@ body {
 position: relative;
  }
 
+/*welcome page if not logged in */
+
 .links {
   color: red;
   font-family: "Impact";
@@ -28,23 +30,6 @@ position: relative;
  /* border-radius: 10px;*/
 }
 
-.login {
-text-align: right;
-position: absolute;
-right: 170px;
-top: 100px;
-color: white;
-font-size: 20px;
-}
-
-.banner {
-  background-color: black;
-  height: 200px;
-  border-radius: 50px;
-  border: 10px solid black;
-
-
-}
 
 div a {
   color: white;
@@ -62,16 +47,6 @@ div p {
   margin-top: 10px;
 }
 
-.logo {
-  transition: .5s all;
-  color: white;
-  font-size: 90px;
-  font-family: "Impact";
-}
-
- .logo:hover {
-  font-size: 100px;
-}
 
 div.signup {
   width: 800px;
@@ -94,15 +69,6 @@ p.signup {
   height: 500px;
 }
 
-/*
-.banner {
-  width: 1590px;
-  height: 100px ;
-  background-color: black;
-  margin: 0;
-}*/
-
-/*test comment for JK*/
 
 #routes {
   position: inline;
