@@ -2,7 +2,8 @@
   position: relative;
   background-image: url("http://i59.tinypic.com/o107mh.jpg");
   background-repeat: no-repeat;
-  background-size: 2000px 1000px;
+  background-size: cover;
+  /*background-size: 2000px 1000px;*/
 }
 
 #map-canvas {
@@ -18,7 +19,7 @@
   height: 500px;
   width: 400px;
   border: 10px dotted white;
-  bottom: 10px;
+  bottom: 115px;
   left: 10px;
   position: absolute;
   border-radius: 10px;
@@ -31,7 +32,7 @@
   border: 10px dotted white;
   height: 500px;
   width: 400px;
-  bottom: 10px;
+  bottom: 115px;
   border-radius: 10px;
   /*float: right;*/
   /*margin: 0 auto;*/
@@ -50,4 +51,35 @@
   color: white;
   text-decoration: underline;
 
+}
+
+#citibike {
+  font-size: 20px;
+  color: red;
+  background-color: #91BDFF;
+
+
+}
+
+#bikeshops {
+  font-size: 20px;
+  color: red;
+  background-color: #91BDFF;
+
+}
+
+#accidents {
+  font-size: 20px;
+  color: red;
+  background-color: #91BDFF;
+
+}
+
+.footer_user {
+  background-color: #333333;
+  height: 100px;
+  width: 1480px ;
+  bottom: 0px;
+  left: 0;
+  right: 0px;
 }
