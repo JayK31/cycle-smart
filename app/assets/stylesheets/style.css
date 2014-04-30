@@ -85,20 +85,42 @@ p.signup {
   text-align: center;
 
 }
-/*
+
 .signup {
   color: white;
 }
-*//*
+
 #map-canvas {
   height: 500px;
-}*/
+}
+
 /*
 .banner {
   width: 1590px;
   height: 100px ;
   background-color: black;
   margin: 0;
+}*/
 
+/*test comment for JK*/
+
+#routes {
+  position: inline;
+  height: 600px;
+  width: 500px;
+  border-style: solid;
+  float: left;
+  background-color: #99CCFF;
+  margin: auto;
 }
-*/
+
+#directions {
+  position: inline;
+  height: 600px;
+  width: 500px;
+  border-style: solid;
+  float: right;
+  background-color: #99CCFF;
+  margin: auto;
+}
+
