@@ -4,7 +4,7 @@ describe "visiting the site" do
   describe "a new user visits the site" do
     it "says Welcome to CycleSmart" do
       visit root_path
-      expect( page ).to have_content "Get Started with CycleSmart!"
+      expect( page ).to have_content "Welcome to"
     end
     it "has a form to login" do
       login
@@ -26,11 +26,9 @@ end
 
 def create_new
   visit root_path
-  click_link 'Get Started with CycleSmart'
-  expect( current_path ).to eq "/users/new"
-  fill_in 'Name', with: 'Phil'
-  fill_in 'Email', with: 'phil@phil.com'
-  fill_in 'Password', with: 'password'
-  fill_in 'Password confirmation', with: 'password'
+  fill_in 'Your First Name', with: 'Phil'
+  fill_in 'Your Email Address', with: 'phil@phil.com'
+  fill_in 'New password', with: 'password'
+  fill_in 'Re-Enter Password', with: 'password'
   click_on 'Sign Up'
 end
