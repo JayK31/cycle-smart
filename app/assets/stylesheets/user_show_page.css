@@ -137,6 +137,20 @@ input#route_end_point {
 
 
 }
+
+#route-list {
+  transition: 7s;
+  color: black;
+  font-family: 'Permanent Marker';
+  font-size: 20px;
+}
+
+
+#route-list:hover {
+  color: yellow;
+
+}
+
 #directions-button {
   position: absolute;
   right: 138px;
@@ -144,6 +158,7 @@ input#route_end_point {
 
 
 }
+
 
 input#directions-origin {
   width: 300px;
