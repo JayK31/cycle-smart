@@ -6,6 +6,13 @@
   /*background-size: 2000px 1000px;*/
 }
 
+#hi {
+  font-family: 'Crafty Girls', cursive;
+  display: inline;
+  color: white;
+
+}
+
 #map-canvas {
   height: 510px;
   width: 500px;
@@ -16,6 +23,7 @@
 
 #routes {
   background-color: #91BDFF;
+  opacity: 0.85;
   height: 500px;
   width: 400px;
   border: 10px dotted white;
@@ -24,6 +32,40 @@
   position: absolute;
   border-radius: 10px;
   overflow:scroll
+
+}
+
+#directions-button {
+  position: absolute;
+  right: 185px;
+  top: 100px;
+
+}
+
+input#directions-origin {
+  width: 300px;
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+
+}
+
+input#directions-destination {
+  width: 300px;
+  font-size: 20px;
+  margin: 20px;
+}
+
+input#directions-trigger {
+  position: absolute;
+  right: 150px;
+
+}
+
+#form-directions {
+  position: absolute;
+  top: 130px;
+  right: 50px;
 
 }
 
@@ -36,11 +78,8 @@
   width: 400px;
   bottom: 115px;
   border-radius: 10px;
-  overflow:scroll
-  /*float: right;*/
-  /*margin: 0 auto;*/
-  /*position: absolute;*/
-
+  overflow:scroll;
+  opacity: 0.85;
 }
 
 #routestext {
@@ -55,6 +94,7 @@
   text-decoration: underline;
 
 }
+
 
 #citibike {
   font-size: 20px;
@@ -82,7 +122,8 @@
   background-color: #333333;
   height: 100px;
   width: 1480px ;
-  bottom: 0px;
-  left: 0;
+  bottom: -10px;
+  left: -30px;
   right: 0px;
+  margin: 0 auto;
 }
