@@ -16,8 +16,7 @@
     <div id= "create-route-button">
     </div>
 
-    <form id="form-route">
-      <%= form_for([@user, @route]) do |f| %>
+      <%= form_for [@user, @route], :url => user_routes_path(@user), :html => {:id => "form-route"} do |f| %>
         <%= f.label :start_point %>
         <%= f.text_field :start_point %>
         <%= f.label :end_point %>
@@ -26,7 +25,6 @@
         <%= f.text_field :description %>
         <%= f.submit %>
       <% end %>
-    </form>
 
     <h1>Hi <%= @user.name %></h1>
     <center><button id="citibike">CitiBike Stations</button></center><br>
