@@ -7,11 +7,31 @@
 }
 
 #hi {
-  font-family: 'Crafty Girls', cursive;
+  font-family: 'Permanent Marker', cursive;
   display: inline;
   color: white;
 
 }
+
+#citibike {
+  font-size: 20px;
+  color: red;
+ background-color: rgba(255, 255, 255, .9);
+
+}
+
+#bikeshops {
+  font-size: 20px;
+  color: red;
+ background-color: rgba(255, 255, 255, .9);
+}
+
+#accidents {
+  font-size: 20px;
+  color: red;
+ background-color: rgba(255, 255, 255, .9);
+}
+
 
 #map-canvas {
   height: 510px;
@@ -20,6 +40,12 @@
   border-radius: 10px;
 }
 
+#routestext {
+  color: white;
+  text-decoration: underline;
+
+
+}
 
 #routes {
   background-color: #91BDFF;
@@ -35,10 +61,63 @@
 
 }
 
+#create-route-button {
+  position: absolute;
+  left: 159px;
+  top: 90px;
+
+}
+
+input#route-start {
+  width: 300px;
+  font-size: 20px;
+  left: 20px;
+  position: absolute;
+
+}
+
+input#route-end {
+  width: 300px;
+  font-size: 20px;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+#route-trigger {
+  position: absolute;
+  left: 140px;
+
+}
+
+#form-route {
+  position: absolute;
+  top:130px;
+  left: 60px;
+
+}
+
+#route-formdrop {
+  font-size: 20px;
+  color: red;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 50px;
+/*#91BDFF;*/
+
+}
+
+.routelinks {
+  color: yellow;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  overflow: scroll;
+
+
+}
 #directions-button {
   position: absolute;
-  right: 185px;
-  top: 100px;
+  right: 158px;
+  top: 90px;
+
 
 }
 
@@ -54,6 +133,7 @@ input#directions-destination {
   width: 300px;
   font-size: 20px;
   margin: 20px;
+  margin-bottom: 0px;
 }
 
 input#directions-trigger {
@@ -66,8 +146,22 @@ input#directions-trigger {
   position: absolute;
   top: 130px;
   right: 50px;
+}
+
+#directions-formdrop {
+  font-size: 20px;
+  color: red;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 50px;
 
 }
+
+#directionstext {
+  color: white;
+  text-decoration: underline;
+
+}
+
 
 #directions {
   right: 10px;
@@ -82,41 +176,9 @@ input#directions-trigger {
   opacity: 0.85;
 }
 
-#routestext {
-  color: white;
-  text-decoration: underline;
 
 
-}
 
-#directionstext {
-  color: white;
-  text-decoration: underline;
-
-}
-
-
-#citibike {
-  font-size: 20px;
-  color: red;
-  background-color: #91BDFF;
-
-
-}
-
-#bikeshops {
-  font-size: 20px;
-  color: red;
-  background-color: #91BDFF;
-
-}
-
-#accidents {
-  font-size: 20px;
-  color: red;
-  background-color: #91BDFF;
-
-}
 
 .footer_user {
   background-color: #333333;
