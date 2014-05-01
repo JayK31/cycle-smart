@@ -7,14 +7,13 @@
 
     <div id= "create-route-button">
     </div>
-    <form id="form-route">
-      <input id="route-start" type="text" name="startname" placeholder="Enter Start Point"><br>
-      <input id="route-end" type="text" name="endname" placeholder="Enter End Point">
-      <br>
-      <input id="route-trigger" type="submit" value="Submit">
-    </form>
-
-
+      <%= form_for [@user, @route], :url => user_routes_path(@user), :html => {:id => "form-route"} do |f| %>
+        <%= f.label :start_point %>
+        <%= f.text_field :start_point, id: "start-point" %>
+        <%= f.label :end_point %>
+        <%= f.text_field :end_point, id: "end-point" %>
+        <%= submit_tag "Add Route", id: "add-route" %>
+      <% end %>
 
     <center><h1 id="hi">Hi <%= @user.name %></h1></center>
     <center><button id="citibike">CitiBike Stations</button></center><br>
@@ -35,19 +34,8 @@
 
       <h2 id="routestext"><center> My Routes </center></h2>
 
-        <ul>
-    <% @routes.each do |route| %>
-        <li>
-          <a class="routelinks" href="/users/<%= @user.id %>/routes/<%= route.id %>">
-            <%= route.start_point %> to <%= route.end_point %>
-          </a>
-        </li>
-    <% end %>
-  </ul>
-
-
-      <div id="route-list">
-      </div>
+        <ul id="route-list">
+        </ul>
 
     </div>
      <div id = "directions-button">
