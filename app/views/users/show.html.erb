@@ -15,11 +15,17 @@
 
     <div id= "create-route-button">
     </div>
+
     <form id="form-route">
-      Start: <input id="route-start" type="text" name="startname"><br>
-      End: <input id="route-end" type="text" name="endname">
-      <br>
-      <input id="route-trigger" type="submit" value="Submit">
+      <%= form_for([@user, @route]) do |f| %>
+        <%= f.label :start_point %>
+        <%= f.text_field :start_point %>
+        <%= f.label :end_point %>
+        <%= f.text_field :end_point %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <%= f.submit %>
+      <% end %>
     </form>
 
     <h1>Hi <%= @user.name %></h1>
