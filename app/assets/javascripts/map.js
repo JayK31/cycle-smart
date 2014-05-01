@@ -213,19 +213,6 @@ $(document).ready(function(){
     }
   })
 
-  // $("#citibike").on("click", function() {
-  //   $.each(station_markers_array, function(index, marker) {
-  //     marker.setMap(map);
-  //   });
-  // })
-
-
-  // $("#accidents").on("click", function() {
-  //   $.each(accident_markers_array, function(index, marker) {
-  //     marker.setMap(map);
-  //   });
-  // })
-
   $("#bikeshops").change(function() {
     if( $("#bikeshops").prop("checked")) {
       showBikeshop();
