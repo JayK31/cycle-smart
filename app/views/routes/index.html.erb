@@ -1,16 +1,5 @@
-<h2>Routes</h2>
+<% @routes.each do |route| %>
+  <%= route.start_point %>
+<% end %>
 
-<%= link_to "Create a new route", new_user_route_path %><br/>
-<%= link_to "Home", root_path %>
-
-<p>All your routes</p>
-  <ul>
-    <% @routes.each do |route| %>
-        <li>
-          <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
-            <%= route.start_point %> to <%= route.end_point %>
-          </a>
-        </li>
-    <% end %>
-  </ul>
-
+<%= @user.id %>

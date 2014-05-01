@@ -16,8 +16,7 @@
     <div id= "create-route-button">
     </div>
 
-    <form id="form-route">
-      <%= form_for([@user, @route]) do |f| %>
+      <%= form_for [@user, @route], :url => user_routes_path(@user), :html => {:id => "form-route"} do |f| %>
         <%= f.label :start_point %>
         <%= f.text_field :start_point %>
         <%= f.label :end_point %>
@@ -26,7 +25,6 @@
         <%= f.text_field :description %>
         <%= f.submit %>
       <% end %>
-    </form>
 
     <h1>Hi <%= @user.name %></h1>
     <center><button id="citibike">CitiBike Stations</button></center><br>
@@ -39,23 +37,16 @@
       <div id="map-canvas">
       </div>
 
-
+    <!-- hidden field to retrieve user ID in routes.js AJAX request -->
+    <input type="hidden" value="<%= @user.id %>" id="user-id"></input>
 
     <br/>
     <div id="routes">
 
       <h2 id="routestext"><center> My Routes </center></h2>
       <%= link_to "See My Routes", user_routes_path(@user) %><br/>
-        <ul>
-    <% @routes.each do |route| %>
-        <li>
-          <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
-            <%= route.start_point %> to <%= route.end_point %>
-          </a>
-        </li>
-    <% end %>
-  </ul>
-
+      <div id="route-list">
+      </div>
     </div>
     <div id = "directions">
       <h2 id="directionstext"><center> Directions </center></h2>
