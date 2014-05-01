@@ -1,4 +1,4 @@
-class GrouponController < ApplicatonController
+class GrouponController < ApplicationController
 
   def index
     @bike_deals = Groupon.fetch

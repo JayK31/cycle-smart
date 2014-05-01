@@ -3,6 +3,7 @@ var map;
 var station_markers_array = [];
 var accident_markers_array = [];
 var bikeshop_markers_array = [];
+var groupon_markers_array = [];
 
 
 
@@ -46,6 +47,20 @@ function showBikeshop() {
   if (bikeshop_markers_array) {
     $.each(bikeshop_markers_array, function(index, bikeshop) {
       bikeshop_markers_array[index].setMap(map)
+    })
+  }
+};
+function clearGroupon() {
+  if (groupon_markers_array) {
+    $.each(groupon_markers_array, function(index, deal) {
+      groupon_markers_array[index].setMap(null)
+    })
+  }
+}
+function showGroupon() {
+  if (groupon_markers_array) {
+    $.each(groupon_markers_array, function(index, deal) {
+      groupon_markers_array[index].setMap(map)
     })
   }
 };
@@ -130,7 +145,7 @@ function initialize(location){
   }).done(function(stations) {
     $.each(stations, function(index, station) {
       var station_location = new google.maps.LatLng(Number(station["latitude"]), Number(station["longitude"]));
-     var station_marker = new google.maps.Marker({
+      var station_marker = new google.maps.Marker({
         position: station_location,
         // map: map,
         draggable: false,
@@ -154,35 +169,56 @@ function initialize(location){
       var shop_location = new google.maps.LatLng(
         Number(shop["geometry"]["location"]["lat"]), Number(shop["geometry"]["location"]["lng"]));
 
-      // var contentShopMarker = '<div id="shop-marker">' +
-      // '<div id="shop-marker-name">' +
-      // '<h4>' + shop["name"] + '</h4>' +
-      // '</div>' +
-      // '<div id="shop-marker-address">' +
-      // '<p>' + shop["formatted_address"] + '</p>' +
-      // '</div>' +
-      // '<div id="shop-marker-info">' +
-      // '<p>' + '<strong>Open Now?: </strong>' + shop["opening_hours"]["open_now"] +
-      // '<strong> Rating: </strong>' + shop["rating"] + '</p>' +
-      // '</div>' +
-      // '</div>';
+      var contentShopMarker = '<div id="shop-marker">' +
+      '<div id="shop-marker-name">' +
+      '<h4>' + shop["name"] + '</h4>' +
+      '</div>' +
+      '<div id="shop-marker-address">' +
+      '<p>' + shop["formatted_address"] + '</p>' +
+      '</div>' +
+      '<div id="shop-marker-info">' +
+      '<p>' + '<strong>Open Now?: </strong>' + shop["opening_hours"]["open_now"] +
+      '<strong> Rating: </strong>' + shop["rating"] + '</p>' +
+      '</div>' +
+      '</div>';
 
-      // var infowindow = new google.maps.InfoWindow({
-      //   content: contentShopMarker
-      // });
+      var infowindow = new google.maps.InfoWindow({
+        content: contentShopMarker
+      });
 
       var shop_marker = new google.maps.Marker({
         position: shop_location,
-        map: map,
+        // map: map,
         draggable: false,
         animation: google.maps.Animation.DROP,
         icon: shop["icon"]
       });
       bikeshop_markers_array.push(shop_marker);
 
-      // google.maps.event.addListener(shop_marker, 'click', function() {
-      //   infowindow.open(map,shop_marker);
-      // });
+      google.maps.event.addListener(shop_marker, 'click', function() {
+        infowindow.open(map,shop_marker);
+      });
+    });
+  });
+
+$.ajax({
+    url: "/groupon",
+    method: "GET",
+    dataType: "json"
+  }).done(function(bikedeals) {
+    $.each(bikedeals, function(index, deal) {
+      var groupon_location = new google.maps.LatLng(deal["division"]["lat"], deal["division"]["lng"]);
+       var groupon_marker = new google.maps.Marker({
+          position: groupon_location,
+          // map: map,
+          draggable: false,
+          animation: google.maps.Animation.DROP,
+          icon: '/assets/greenDot.gif'
+       });
+
+     // station_marker.setMap(map)
+     groupon_markers_array.push(groupon_marker);
+
     });
   });
 }
@@ -220,4 +256,12 @@ $(document).ready(function(){
       clearBikeshop();
     }
   })
+
+  $("#groupon").change(function() {
+    if( $("#groupon").prop("checked")) {
+      showGroupon();
+    } else {
+      clearGroupon();
+    }
+  });
 });
