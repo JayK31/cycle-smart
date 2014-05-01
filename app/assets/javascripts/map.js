@@ -185,11 +185,8 @@ function initialize(location){
       // });
     });
   });
-<<<<<<< HEAD
-=======
-
->>>>>>> eebf628c5ec6c98d29b1c2f03bad2c2a62ac14a6
 }
+
 
 
 $(document).ready(function(){
@@ -199,7 +196,7 @@ $(document).ready(function(){
 
   navigator.geolocation.getCurrentPosition(initialize);
 
-<<<<<<< HEAD
+
   $("#citibike").change(function() {
     if( $("#citibike").prop("checked")) {
       showCitibike();
@@ -214,20 +211,20 @@ $(document).ready(function(){
     } else {
       clearAccidents();
     }
-=======
-  $("#citibike").on("click", function() {
-    $.each(station_markers_array, function(index, marker) {
-      marker.setMap(map);
-    });
   })
 
+  // $("#citibike").on("click", function() {
+  //   $.each(station_markers_array, function(index, marker) {
+  //     marker.setMap(map);
+  //   });
+  // })
 
-  $("#accidents").on("click", function() {
-    $.each(accident_markers_array, function(index, marker) {
-      marker.setMap(map);
-    });
->>>>>>> eebf628c5ec6c98d29b1c2f03bad2c2a62ac14a6
-  })
+
+  // $("#accidents").on("click", function() {
+  //   $.each(accident_markers_array, function(index, marker) {
+  //     marker.setMap(map);
+  //   });
+  // })
 
   $("#bikeshops").change(function() {
     if( $("#bikeshops").prop("checked")) {
