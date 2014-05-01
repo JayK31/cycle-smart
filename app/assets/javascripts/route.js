@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+  alert("hey hey");
+
   $("#form-route").hide();
   $("#create-route-button").append($("<button>").attr("id","route-formdrop").text("Create Route"));
   $("#route-formdrop").on('click', function(){
@@ -18,7 +20,6 @@ $(document).ready(function(){
     method: "GET",
     dataType: "json"
   }).done(function(routes){
-    alert("hi");
     var i = 1;
     $.each(routes, function(index, route){
       var route_id = '"route-' + i;
