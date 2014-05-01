@@ -7,7 +7,6 @@ class ShopController < ApplicationController
       format.html {}
       format.json { render json: @shops }
     end
-
   end
 
 end
