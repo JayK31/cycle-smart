@@ -1,8 +1,6 @@
 var autocompleteOrigin;
 var autocompleteDestination;
-// var defaultBounds = new google.maps.LatLngBounds(
-//   new google.maps.LatLng(40.7733, -73.9818),
-//   new google.maps.LatLng(40.6833, -73.9411));
+
 $(document).ready(function(){
   var options = {
     // bounds: defaultBounds,
