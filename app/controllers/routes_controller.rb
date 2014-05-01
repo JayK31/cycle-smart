@@ -3,6 +3,11 @@ class RoutesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @routes = Route.where(user_id: params[:user_id])
+
+    respond_to do |format|
+      format.html {}
+      format.json { render json: @routes }
+    end
   end
 
   def new
