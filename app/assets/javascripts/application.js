@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require route
 //= require map
 //= require directions
-//= require autocomplete.js
+//= require autocomplete
 //= require_tree .

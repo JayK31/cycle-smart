@@ -17,7 +17,7 @@
       <center><input type="checkbox" id="accidents" name="accidents" value="accidents" />Accidents</center><br/>
       <center><input type="checkbox" id="groupon" name="groupon" value="groupon" />Groupon Deals </center><br/>
     </form>
-
+    <!-- create route form -->
       <%= form_for [@user, @route], :url => user_routes_path(@user), :html => {:id => "form-route"} do |f| %>
         <%= f.text_field :start_point, :placeholder => "Enter Start Here" %>
         <%= f.text_field :end_point, :placeholder => "Enter End Here" %>

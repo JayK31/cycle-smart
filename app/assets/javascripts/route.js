@@ -3,7 +3,6 @@
 $(document).ready(function(){
 
 
-
   $("#form-route").hide();
   $("#create-route-button").append($("<button>").attr("id","route-formdrop").text("Create Route"));
   $("#route-formdrop").on('click', function(){
