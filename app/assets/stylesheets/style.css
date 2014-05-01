@@ -17,4 +17,40 @@ background-size: cover;
   width: 600px;
 }
 
+#tips {
+
+  background-color: #e8eae9;
+}
+
+#tips-locking {
+
+  float: left;
+  margin: 30px;
+  padding: 50px;
+  height: 300px;
+  width: 300px;
+  background-color: #95EAFF;
+
+}
+
+#tips-riding {
+
+  float: left;
+  margin: 30px;
+  padding: 50px;
+  height: 300px;
+  width: 300px;
+  background-color: #95EAFF;
+
+}
+
+#tips-safety {
+
+  float: left;
+  margin: 30px;
+  padding: 50px;
+  height: 300px;
+  width: 300px;
+  background-color: #95EAFF;
+}
 
