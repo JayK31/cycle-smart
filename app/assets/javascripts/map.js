@@ -188,6 +188,7 @@ function initialize(location){
 }
 
 
+
 $(document).ready(function(){
 // getting user location with HTML5 Geolocation location
 // passing it the name of a function - 'initialize'
@@ -209,6 +210,7 @@ $(document).ready(function(){
     } else {
       clearAccidents();
     }
+
   });
 
   $("#bikeshops").change(function() {
