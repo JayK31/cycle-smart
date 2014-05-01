@@ -23,6 +23,7 @@ $(document).ready(function(){
       var route_id = '"route-' + i;
       var listItem = $("<li id=" + route_id + '">' + route.start_point + " to " + route.end_point + "</li>");
       $("#route-list").append(listItem);
+      console.log(listItem);
       listItem.on("click", function(event){
 
         function getDirections(){
