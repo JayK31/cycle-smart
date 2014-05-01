@@ -5,6 +5,11 @@ background-repeat: no-repeat;
 background-size: cover;
  }
 
+ #welcome img {
+  opacity: .9;
+
+ }
+
 
 
 #directions-origin {

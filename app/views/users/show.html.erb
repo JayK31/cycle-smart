@@ -4,14 +4,6 @@
     <%= link_to "Edit Your Account", edit_user_path(@user), class: "links" %>
     <%= link_to "Delete Your Account", user_path(@user), method: :delete, class: "links" %>
 
-    <div id = "directions-button">
-    </div>
-
-    <form id = "form-directions">
-      Origin: <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin"><br>
-      Destination: <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination"><br>
-      <input id= "directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
-    </form>
 
     <div id= "create-route-button">
     </div>
@@ -51,6 +43,13 @@
   </ul>
 
     </div>
+     <div id = "directions-button">
+    </div>
+      <form id = "form-directions">
+      <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin"><br>
+      <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination"><br>
+      <input id= "directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
+    </form>
     <div id = "directions">
       <h2 id="directionstext"><center> Directions </center></h2>
     </div>
