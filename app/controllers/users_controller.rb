@@ -19,8 +19,9 @@ class UsersController < ApplicationController
         redirect_to @user
       # flash error, render new form is something went wrong
       else
+        redirect_to "/"
         flash[:create_error] = "Something went wrong!"
-        render :new
+
       end
   end
 

@@ -1,10 +1,10 @@
 
 .banner {
-  background-color: #333333;
+  background-color: rgba(84, 84, 84, 0.85);
   height: 170px;
   width: 1220px;
   margin: 0 auto;
-  border: 5px solid white ;
+  border: 10px solid rgba(255, 255, 255, 1);
   border-radius: 20px;
 
 }
@@ -26,11 +26,21 @@ img#cyclerlogo {
   top: 80px;
 }
 
+#createaccount {
+  font-family: 'Crafty Girls', cursive;
+  font-size: 50px;
+  color: red;
+  position: absolute;
+  display: inline;
+  left: 100px;
+
+}
+
 .signupform {
   display: inline-block;
   position: absolute;
-  top: 300px;
-  left: 230px;
+  top: 400px;
+  left: 100px;
 
 }
 
@@ -83,12 +93,13 @@ a.getstarted {
 
 .logo {
   color: white;
-  font-family: "Kharnorric";
-  font-size: 40px;
+  font-family: 'Crafty Girls', cursive;
+  font-size: 50px;
+  margin-left: 30px;
 }
 
 .footer {
-  background-color: #333333;
+  background-color: rgba(84, 84, 84, 0.98);
   height: 100px;
   width: 1480px ;
   position: fixed;

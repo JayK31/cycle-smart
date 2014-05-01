@@ -6,6 +6,13 @@
   /*background-size: 2000px 1000px;*/
 }
 
+#hi {
+  font-family: 'Crafty Girls', cursive;
+  display: inline;
+  color: white;
+
+}
+
 #map-canvas {
   height: 510px;
   width: 500px;
@@ -82,7 +89,9 @@
   background-color: #333333;
   height: 100px;
   width: 1480px ;
-  bottom: 0px;
-  left: 0;
+  bottom: -10px;
+  left: -30px;
   right: 0px;
+  margin: 0 auto;
+  position: absolute;
 }
