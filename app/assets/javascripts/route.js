@@ -10,9 +10,10 @@ $(document).ready(function(){
     $("#form-route").slideDown();
   });
 
-  $("#route-trigger").on('click', function(event){
-    $(preventDefault);
+    $("#routes").hide();
 
+  $("#create-route-button").on('click', function(event){
+    $("#routes").slideDown();
   });
 
   $.ajax({
@@ -24,6 +25,16 @@ $(document).ready(function(){
       $("#route-list").append("<li>" + route.start_point + " to " + route.end_point + "</li>");
     });
   });
+
+
+  // $("#routes").hide();
+  // $("#routestext").on("mouseover", function(){
+  //   $("#routes").slideDown();
+
+  // });
+
+
+
 
 
   // $("#create-route-button").mouseover(function(){
