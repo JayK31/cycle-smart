@@ -14,7 +14,7 @@ $(document).ready(function(){
 
   $("#create-route-button").on('click', function(event){
       event.preventDefault();
-    $("#routes").slideDown();
+    $("#routes").fadeIn();
   });
 
   $.ajax({

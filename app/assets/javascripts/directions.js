@@ -32,7 +32,7 @@ $(document).ready(function(){
   $("#directions").hide();
 
   $("#directions-button").on("click", function(){
-    $("#directions").slideDown();
+    $("#directions").fadeIn();
 
 
   });
