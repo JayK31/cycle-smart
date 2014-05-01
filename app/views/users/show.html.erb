@@ -17,9 +17,14 @@
 
     <h1>Hi <%= @user.name %></h1>
     <form action="">
-      <center><input type="checkbox" id="citibike" name="citibike" value="citibike" />CitiBike</center><br/>
+    <div class="slideTwo">
+      <input type="checkbox" value="citibike" id="citibike" name="citibike" />
+    <label for="slideTwo"></label>
+    <!--
+      <center><input type="checkbox" id="citibike" name="citibike" value="citibike" />CitiBike</center> -->
       <center><input type="checkbox" id="bikeshops" name="bikeshops" value="bikeshops" />Bike Shops</center><br/>
       <center><input type="checkbox" id="accidents" name="accidents" value="accidents" />Accidents</center><br/>
+    </div>
     </form>
 
 
