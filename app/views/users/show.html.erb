@@ -14,7 +14,7 @@
       <center><input type="checkbox" id="bikeshops" name="bikeshops" value="bikeshops" />Bike Shops</center><br/>
       <center><input type="checkbox" id="accidents" name="accidents" value="accidents" />Accidents</center><br/>
     </form>
-
+    <!-- create route form -->
       <%= form_for [@user, @route], :url => user_routes_path(@user), :html => {:id => "form-route"} do |f| %>
         <%= f.label :start_point %>
         <%= f.text_field :start_point %>
