@@ -1,10 +1,10 @@
 #user-wrapper {
   position: relative;
-  background-image: url("http://i59.tinypic.com/o107mh.jpg");
-  background-repeat: no-repeat;
+/*  background-image: url("http://i59.tinypic.com/o107mh.jpg");
+*/background-repeat: no-repeat;
+  background-image: url("http://p1.pichost.me/640/42/1657070.jpg");
   background-size: cover;
   margin: 0;
-  /*background-size: 2000px 1000px;*/
 }
 
 #hi {
@@ -19,7 +19,6 @@
   font-size: 20px;
   font-family: 'Permanent Marker', cursive;
   color: white;
-  /*background-color: rgba(255, 255, 255, .9);*/
 }
 
 #bikeshops {
@@ -40,6 +39,7 @@
   width: 500px;
   margin: 0 auto;
   border-radius: 10px;
+  border: 10px dotted black;
 }
 
 #routestext {
@@ -102,6 +102,12 @@ input#route_end_point {
   color: red;
   background-color: rgba(255, 255, 255, .9);
   font-family: 'Permanent Marker', cursive;
+
+}
+
+#route-formdrop:hover {
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
 
 }
 

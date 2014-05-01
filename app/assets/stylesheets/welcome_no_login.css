@@ -30,9 +30,9 @@ img#cyclerlogo {
 }
 
 #createaccount {
-  font-family: 'Permanent Marker', cursive;
   font-size: 40px;
   color: red;
+  font-family: 'Permanent Marker', cursive;
   position: absolute;
   display: inline;
   left: 100px;
@@ -46,6 +46,12 @@ img#cyclerlogo {
   position: absolute;
   top: 400px;
   left: 100px;
+
+
+}
+
+.button {
+    font-family: 'Permanent Marker', cursive;
 
 
 }
