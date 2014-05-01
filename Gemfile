@@ -25,8 +25,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rails_12factor', group: :production
 
-# ruby "2.1.0"
-ruby "1.9.3"
+ruby "2.1.0"
+# ruby "1.9.3"
 
 # rbenv local 1.9.3 
 
