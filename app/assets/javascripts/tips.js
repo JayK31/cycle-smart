@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
-  $("locking-1").hide;
-
   $("#tips-locking").on('click', function(){
-
-      $("locking-1").show();
+      var lock = $("<div>").attr("id","locking-1");
+      $("#tips").append(lock);
 
   });
 
