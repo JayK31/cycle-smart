@@ -37,23 +37,16 @@
       <div id="map-canvas">
       </div>
 
-
+    <!-- hidden field to retrieve user ID in routes.js AJAX request -->
+    <input type="hidden" value="<%= @user.id %>" id="user-id"></input>
 
     <br/>
     <div id="routes">
 
       <h2 id="routestext"><center> My Routes </center></h2>
       <%= link_to "See My Routes", user_routes_path(@user) %><br/>
-        <ul>
-    <% @routes.each do |route| %>
-        <li>
-          <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
-            <%= route.start_point %> to <%= route.end_point %>
-          </a>
-        </li>
-    <% end %>
-  </ul>
-
+      <div id="route-list">
+      </div>
     </div>
     <div id = "directions">
       <h2 id="directionstext"><center> Directions </center></h2>
