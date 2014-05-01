@@ -2,15 +2,19 @@
 
 $(document).ready(function(){
 
+
+
   $("#form-route").hide();
   $("#create-route-button").append($("<button>").attr("id","route-formdrop").text("Create Route"));
   $("#route-formdrop").on('click', function(){
     $("#form-route").slideDown();
   });
 
+    $("#routes").hide();
 
-  $("#route-trigger").on('click', function(event){
-    event.preventDefault();
+  $("#create-route-button").on('click', function(event){
+      event.preventDefault();
+    $("#routes").slideDown();
   });
 
   $.ajax({
@@ -55,6 +59,28 @@ $(document).ready(function(){
       i++;
     });
   });
+
+
+  // $("#routes").hide();
+  // $("#routestext").on("mouseover", function(){
+  //   $("#routes").slideDown();
+
+  // });
+
+
+
+
+
+  // $("#create-route-button").mouseover(function(){
+  //   $("#route-formdrop").css("text-shadow", "0px 1px 1px #4d4d4d");
+  //   $("#route-formdrop").css("color","#222");
+
+  // });
+
+  // $("#create-route-button").mouseleave(function(){
+  //   $("#route-formdrop").css("color", "red");
+  // });
+
 
 });
 

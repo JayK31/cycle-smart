@@ -8,27 +8,23 @@
     <div id= "create-route-button">
     </div>
 
-    <h1>Hi <%= @user.name %></h1>
+        <center><h1 id="hi">Hi <%= @user.name %></h1></center>
+        <br>
+
     <form action="">
-      <center><input type="checkbox" id="citibike" name="citibike" value="citibike" />CitiBike</center><br/>
-      <center><input type="checkbox" id="bikeshops" name="bikeshops" value="bikeshops" />Bike Shops</center><br/>
-      <center><input type="checkbox" id="accidents" name="accidents" value="accidents" />Accidents</center><br/>
+      <center><input type="checkbox" id="citibike" name="citibike" value="citibike" /><span id="citibike">Citi Bike</span></center>
+
+      <center><input type="checkbox" id="bikeshops" name="bikeshops" value="bikeshops" /><span id="bikeshops">Bike Shops</span></center>
+      <center><input type="checkbox" id="accidents" name="accidents" value="accidents" /><span id="accidents">Accidents</span></center><br/>
+    </div>
     </form>
 
       <%= form_for [@user, @route], :url => user_routes_path(@user), :html => {:id => "form-route"} do |f| %>
-        <%= f.label :start_point %>
-        <%= f.text_field :start_point %>
-        <%= f.label :end_point %>
-        <%= f.text_field :end_point %>
-        <%= f.submit %>
+        <%= f.text_field :start_point, :placeholder => "Enter Start Here" %>
+        <%= f.text_field :end_point, :placeholder => "Enter End Here" %>
+        <%= f.submit 'Create Route', :id => 'route-trigger'%>
       <% end %>
 
-    <center><h1 id="hi">Hi <%= @user.name %></h1></center>
-    <center><button id="citibike">CitiBike Stations</button></center><br>
-
-    <center><button id="bikeshops">Bike Shops</button></center><br>
-
-    <center><button id="accidents">Accidents</button></center><br>
 
 
       <div id="map-canvas">
@@ -38,23 +34,31 @@
     <input type="hidden" value="<%= @user.id %>" id="user-id"></input>
 
     <br/>
+
+          <h2 id="routestext"> My Routes</h2>
+
     <div id="routes">
 
-      <h2 id="routestext"><center> My Routes </center></h2>
-
+<!--       <h2 id="routestext"><center> My Routes </center></h2>
+ -->
         <ul id="route-list">
         </ul>
+
+
 
     </div>
      <div id="directions-button">
     </div>
-      <form id="form-directions">
-      <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin"><br>
-        <input id="directions-destination" type="text" name="destination" placeholder= "Enter Destination">
-      <input id="directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
+
+              <h2 id="directionstext"><center> Directions </center></h2>
+
+
+      <form id = "form-directions">
+      <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin">
+        <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination">
+      <input id= "directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
     </form>
-    <div id="directions">
-      <h2 id="directionstext"><center> Directions </center></h2>
+    <div id = "directions">
     </div>
       <div class="footer_user">
         <br>

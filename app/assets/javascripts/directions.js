@@ -29,10 +29,26 @@ $(document).ready(function(){
 
   var render = new google.maps.DirectionsRenderer();
 
+  $("#directions").hide();
 
-  $("#directions-trigger").on('click', function(event){
-    event.preventDefault();
-    $("#directions").empty();
-    renderDirections(render);
-  });
-})
+  $("#directions-button").on("click", function(){
+    $("#directions").slideDown();
+
+
+  });
+
+
+
+
+
+  $("#directions-trigger").on('click', function(event){
+    event.preventDefault();
+    $("#directions").empty();
+    renderDirections(render);
+  });
+
+
+
+
+});
+

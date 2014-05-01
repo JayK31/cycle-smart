@@ -1,35 +1,49 @@
 #user-wrapper {
   position: relative;
-  background-image: url("http://i59.tinypic.com/o107mh.jpg");
   background-repeat: no-repeat;
+  background-image: url("http://p1.pichost.me/640/42/1657070.jpg");
   background-size: cover;
-  /*background-size: 2000px 1000px;*/
+  margin: 0;
 }
 
 #hi {
   font-family: 'Permanent Marker', cursive;
   display: inline;
   color: white;
+  text-decoration: underline;
 
 }
 
 #citibike {
   font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+#citibike:hover{
   color: red;
- background-color: rgba(255, 255, 255, .9);
 
 }
 
 #bikeshops {
   font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+#bikeshops:hover {
   color: red;
- background-color: rgba(255, 255, 255, .9);
 }
 
 #accidents {
   font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+#accidents:hover {
   color: red;
- background-color: rgba(255, 255, 255, .9);
+
 }
 
 
@@ -38,11 +52,18 @@
   width: 500px;
   margin: 0 auto;
   border-radius: 10px;
+  border: 10px dotted black;
 }
 
 #routestext {
   color: white;
   text-decoration: underline;
+  font-family: 'Permanent Marker', cursive;
+  display: inline-block;
+  width: 150px;
+  position: absolute;
+  top: 160px;
+  left: 140px;
 
 
 }
@@ -63,35 +84,33 @@
 
 #create-route-button {
   position: absolute;
-  left: 159px;
-  top: 90px;
+  left: 139px;
+  top: 60px;
+
 
 }
 
-input#route-start {
+input#route_start_point {
   width: 300px;
   font-size: 20px;
-  left: 20px;
-  position: absolute;
+  display: block;
 
 }
 
-input#route-end {
+input#route_end_point {
   width: 300px;
   font-size: 20px;
-  margin: 20px;
-  margin-bottom: 0px;
+  display: block;
 }
 
 #route-trigger {
-  position: absolute;
-  left: 140px;
-
+  display: block;
+  margin: 0 auto;
 }
 
 #form-route {
   position: absolute;
-  top:130px;
+  top:100px;
   left: 60px;
 
 }
@@ -100,8 +119,13 @@ input#route-end {
   font-size: 20px;
   color: red;
   background-color: rgba(255, 255, 255, .9);
-  border-radius: 50px;
-/*#91BDFF;*/
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+#route-formdrop:hover {
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
 
 }
 
@@ -115,36 +139,33 @@ input#route-end {
 }
 #directions-button {
   position: absolute;
-  right: 158px;
-  top: 90px;
+  right: 138px;
+  top: 60px;
 
 
 }
 
 input#directions-origin {
   width: 300px;
-  position: absolute;
-  right: 20px;
   font-size: 20px;
+  display: block;
 
 }
 
 input#directions-destination {
   width: 300px;
   font-size: 20px;
-  margin: 20px;
-  margin-bottom: 0px;
+  display: block;
 }
 
 input#directions-trigger {
-  position: absolute;
-  right: 150px;
-
+  display: block;
+  margin: 0 auto;
 }
 
 #form-directions {
   position: absolute;
-  top: 130px;
+  top: 100px;
   right: 50px;
 }
 
@@ -152,13 +173,25 @@ input#directions-trigger {
   font-size: 20px;
   color: red;
   background-color: rgba(255, 255, 255, .9);
-  border-radius: 50px;
+  font-family: 'Permanent Marker', cursive;
 
+
+}
+#directions-formdrop:hover {
+text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
 }
 
 #directionstext {
   color: white;
   text-decoration: underline;
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  display: inline-block;
+  width: 150px;
+  right: 140px;
+  top: 160px;
+
 
 }
 
@@ -189,3 +222,4 @@ input#directions-trigger {
   right: 0px;
   margin: 0 auto;
 }
+
