@@ -7,17 +7,11 @@
 
     <div id= "create-route-button">
     </div>
-
     <form id="form-route">
-      <%= form_for([@user, @route]) do |f| %>
-        <%= f.label :start_point %>
-        <%= f.text_field :start_point %>
-        <%= f.label :end_point %>
-        <%= f.text_field :end_point %>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-        <%= f.submit %>
-      <% end %>
+      <input id="route-start" type="text" name="startname" placeholder="Enter Start Point"><br>
+      <input id="route-end" type="text" name="endname" placeholder="Enter End Point">
+      <br>
+      <input id="route-trigger" type="submit" value="Submit">
     </form>
 
     <center><h1 id="hi">Hi <%= @user.name %></h1></center>
@@ -37,11 +31,11 @@
     <div id="routes">
 
       <h2 id="routestext"><center> My Routes </center></h2>
-      <%= link_to "See My Routes", user_routes_path(@user) %><br/>
+
         <ul>
     <% @routes.each do |route| %>
         <li>
-          <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
+          <a class="routelinks" href="/users/<%= @user.id %>/routes/<%= route.id %>">
             <%= route.start_point %> to <%= route.end_point %>
           </a>
         </li>
@@ -53,7 +47,7 @@
     </div>
       <form id = "form-directions">
       <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin"><br>
-      <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination"><br>
+        <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination">
       <input id= "directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
     </form>
     <div id = "directions">
