@@ -15,4 +15,5 @@
 //= require map
 //= require directions
 //= require autocomplete
+//= require route
 //= require_tree .
