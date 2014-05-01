@@ -15,13 +15,12 @@
     </form>
 
 
-
-    <center><h1 id="hi">Hi <%= @user.name %></h1></center>
-    <center><button id="citibike">CitiBike Stations</button></center><br>
-
-    <center><button id="bikeshops">Bike Shops</button></center><br>
-
-    <center><button id="accidents">Accidents</button></center><br>
+    <h1>Hi <%= @user.name %></h1>
+    <form action="">
+      <center><input type="checkbox" id="citibike" name="citibike" value="citibike" />CitiBike</center><br/>
+      <center><input type="checkbox" id="bikeshops" name="bikeshops" value="bikeshops" />Bike Shops</center><br/>
+      <center><input type="checkbox" id="accidents" name="accidents" value="accidents" />Accidents</center><br/>
+    </form>
 
 
       <div id="map-canvas">

@@ -4,6 +4,52 @@ var station_markers_array = [];
 var accident_markers_array = [];
 var bikeshop_markers_array = [];
 
+
+
+function clearAccidents() {
+  if (accident_markers_array) {
+    $.each(accident_markers_array, function(index, accident) {
+      accident_markers_array[index].setMap(null)
+    })
+  }
+}
+function showAccidents() {
+  if (accident_markers_array) {
+    $.each(accident_markers_array, function(index, accident) {
+      accident_markers_array[index].setMap(map)
+    })
+  }
+};
+function clearCitibike() {
+  if (station_markers_array) {
+    $.each(station_markers_array, function(index, station) {
+      station_markers_array[index].setMap(null)
+    })
+  }
+}
+function showCitibike() {
+  if (station_markers_array) {
+    $.each(station_markers_array, function(index, station) {
+      station_markers_array[index].setMap(map)
+    })
+  }
+};
+
+function clearBikeshop() {
+  if (bikeshop_markers_array) {
+    $.each(bikeshop_markers_array, function(index, bikeshop) {
+      bikeshop_markers_array[index].setMap(null)
+    })
+  }
+}
+function showBikeshop() {
+  if (bikeshop_markers_array) {
+    $.each(bikeshop_markers_array, function(index, bikeshop) {
+      bikeshop_markers_array[index].setMap(map)
+    })
+  }
+};
+
 // 'initialize' function gets passed 'location' object which contains user location info
 function initialize(location){
   console.log(location);
@@ -41,6 +87,7 @@ function initialize(location){
     infowindow.open(map,marker);
   });
 
+  // ajax request for traffic incidents involving bicycles
   $.ajax({
     url: "/traffic_incidents",
     method: "GET",
@@ -48,10 +95,7 @@ function initialize(location){
   }).done(function(incidents) {
     // fixed each method to include index
     $.each(incidents, function(index, incident){
-      // debugger;
       var incident_location = new google.maps.LatLng(Number(incident.latitude), Number(incident.longitude));
-      // debugger;
-
       var contentIncidentMarker = '<div id="incidentContent">' +
       '<strong>Incident Description: </strong>' +
       '<p>' + incident.description + '</p>' +
@@ -72,12 +116,13 @@ function initialize(location){
         infowindow.open(map,incident_marker);
       });
       // set incident market on the map
-
       accident_markers_array.push(incident_marker);
 
     });
   });
 
+
+  // ajax request for citibike stations
   $.ajax({
     url: "/station",
     method: "GET",
@@ -99,6 +144,7 @@ function initialize(location){
     });
   });
 
+  // ajax request for bike shops
   $.ajax({
     url: "/shop",
     method: "GET",
@@ -139,7 +185,10 @@ function initialize(location){
       // });
     });
   });
+<<<<<<< HEAD
+=======
 
+>>>>>>> eebf628c5ec6c98d29b1c2f03bad2c2a62ac14a6
 }
 
 
@@ -150,6 +199,22 @@ $(document).ready(function(){
 
   navigator.geolocation.getCurrentPosition(initialize);
 
+<<<<<<< HEAD
+  $("#citibike").change(function() {
+    if( $("#citibike").prop("checked")) {
+      showCitibike();
+    } else {
+      clearCitibike();
+    }
+  })
+
+  $("#accidents").change(function() {
+    if( $("#accidents").prop("checked")) {
+      showAccidents();
+    } else {
+      clearAccidents();
+    }
+=======
   $("#citibike").on("click", function() {
     $.each(station_markers_array, function(index, marker) {
       marker.setMap(map);
@@ -161,10 +226,14 @@ $(document).ready(function(){
     $.each(accident_markers_array, function(index, marker) {
       marker.setMap(map);
     });
+>>>>>>> eebf628c5ec6c98d29b1c2f03bad2c2a62ac14a6
   })
-  $("#bikeshops").on("click", function() {
-    $.each(bikeshop_markers_array, function(index, marker) {
-      marker.setMap(map);
-    });
+
+  $("#bikeshops").change(function() {
+    if( $("#bikeshops").prop("checked")) {
+      showBikeshop();
+    } else {
+      clearBikeshop();
+    }
   })
 });
