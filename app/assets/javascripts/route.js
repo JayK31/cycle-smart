@@ -18,12 +18,12 @@ $(document).ready(function(){
     method: "GET",
     dataType: "json"
   }).done(function(routes){
+    alert("hi")
     var i = 1;
     $.each(routes, function(index, route){
       var route_id = '"route-' + i;
       var listItem = $("<li id=" + route_id + '">' + route.start_point + " to " + route.end_point + "</li>");
       $("#route-list").append(listItem);
-      console.log(i);
       listItem.on("click", function(event){
 
         function getDirections(){
