@@ -27,9 +27,8 @@ background-size: cover;
 
 #tips-locking {
 
-  float: left;
-  margin: 30px;
-  padding: 50px;
+  position:absolute;
+  margin: 150px;
   height: 300px;
   width: 300px;
   background-color: #95EAFF;
@@ -38,9 +37,9 @@ background-size: cover;
 
 #tips-riding {
 
-  float: left;
-  margin: 30px;
-  padding: 50px;
+  position: absolute;
+  left: 400px;
+  margin: 150px;
   height: 300px;
   width: 300px;
   background-color: #95EAFF;
@@ -49,9 +48,9 @@ background-size: cover;
 
 #tips-safety {
 
-  float: left;
-  margin: 30px;
-  padding: 50px;
+  position: absolute;
+  left: 800px;
+  margin: 150px;
   height: 300px;
   width: 300px;
   background-color: #95EAFF;
@@ -59,11 +58,13 @@ background-size: cover;
 
 #locking-1 {
 
+  position:relative;
+  left: 0px;
+  top: 310px;
   margin: 30px;
-  padding: 50px;
   height: 300px;
   width: 300px;
-  background-color: white;
+  background-color: red;
 
 }
 
