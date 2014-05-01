@@ -139,7 +139,7 @@ input#route_end_point {
 }
 
 #route-list {
-  transition: 7s;
+  transition: 4s;
   color: black;
   font-family: 'Permanent Marker';
   font-size: 20px;
@@ -147,6 +147,7 @@ input#route_end_point {
 
 
 #route-list:hover {
+  cursor: pointer;
   color: yellow;
 
 }
