@@ -115,7 +115,9 @@ function initialize(location){
       google.maps.event.addListener(incident_marker, 'click', function() {
         infowindow.open(map,incident_marker);
       });
+      // set incident market on the map
       accident_markers_array.push(incident_marker);
+
     });
   });
 
@@ -135,8 +137,10 @@ function initialize(location){
         animation: google.maps.Animation.DROP,
         icon: '/assets/blue-dot-button-small.gif'
      });
+
      // station_marker.setMap(map)
      station_markers_array.push(station_marker);
+
     });
   });
 
@@ -174,21 +178,28 @@ function initialize(location){
         animation: google.maps.Animation.DROP,
         icon: shop["icon"]
       });
-      bikeshop_markers_array.push(shop_marker);  
-      
+      bikeshop_markers_array.push(shop_marker);
+
       // google.maps.event.addListener(shop_marker, 'click', function() {
       //   infowindow.open(map,shop_marker);
       // });
     });
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> eebf628c5ec6c98d29b1c2f03bad2c2a62ac14a6
 }
 
 
 $(document).ready(function(){
 // getting user location with HTML5 Geolocation location
 // passing it the name of a function - 'initialize'
+
+
   navigator.geolocation.getCurrentPosition(initialize);
 
+<<<<<<< HEAD
   $("#citibike").change(function() {
     if( $("#citibike").prop("checked")) {
       showCitibike();
@@ -203,6 +214,19 @@ $(document).ready(function(){
     } else {
       clearAccidents();
     }
+=======
+  $("#citibike").on("click", function() {
+    $.each(station_markers_array, function(index, marker) {
+      marker.setMap(map);
+    });
+  })
+
+
+  $("#accidents").on("click", function() {
+    $.each(accident_markers_array, function(index, marker) {
+      marker.setMap(map);
+    });
+>>>>>>> eebf628c5ec6c98d29b1c2f03bad2c2a62ac14a6
   })
 
   $("#bikeshops").change(function() {

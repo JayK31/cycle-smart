@@ -3,6 +3,11 @@ class RoutesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @routes = Route.where(user_id: params[:user_id])
+
+    respond_to do |format|
+      format.html {}
+      format.json { render json: @routes }
+    end
   end
 
   def new
@@ -11,6 +16,7 @@ class RoutesController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @route = Route.new
     @route.start_point = params[:route][:start_point]
     @route.end_point = params[:route][:end_point]
@@ -19,7 +25,7 @@ class RoutesController < ApplicationController
 
     if @route.save
       flash[:message] = "Route added!"
-      redirect_to user_routes_path
+      redirect_to user_path(@user)
     else
       flash[:message] = "Something went wrong! Please try again."
       render(:new)

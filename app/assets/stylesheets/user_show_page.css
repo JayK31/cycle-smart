@@ -6,6 +6,33 @@
   /*background-size: 2000px 1000px;*/
 }
 
+#hi {
+  font-family: 'Permanent Marker', cursive;
+  display: inline;
+  color: white;
+
+}
+
+#citibike {
+  font-size: 20px;
+  color: red;
+ background-color: rgba(255, 255, 255, .9);
+
+}
+
+#bikeshops {
+  font-size: 20px;
+  color: red;
+ background-color: rgba(255, 255, 255, .9);
+}
+
+#accidents {
+  font-size: 20px;
+  color: red;
+ background-color: rgba(255, 255, 255, .9);
+}
+
+
 #map-canvas {
   height: 510px;
   width: 500px;
@@ -13,9 +40,16 @@
   border-radius: 10px;
 }
 
+#routestext {
+  color: white;
+  text-decoration: underline;
+
+
+}
 
 #routes {
   background-color: #91BDFF;
+  opacity: 0.85;
   height: 500px;
   width: 400px;
   border: 10px dotted white;
@@ -27,26 +61,98 @@
 
 }
 
-#directions {
-  right: 10px;
+#create-route-button {
   position: absolute;
-  background-color: #91BDFF;
-  border: 10px dotted white;
-  height: 500px;
-  width: 400px;
-  bottom: 115px;
-  border-radius: 10px;
-  overflow:scroll
-  /*float: right;*/
-  /*margin: 0 auto;*/
-  /*position: absolute;*/
+  left: 159px;
+  top: 90px;
 
 }
 
-#routestext {
-  color: white;
-  text-decoration: underline;
+input#route-start {
+  width: 300px;
+  font-size: 20px;
+  left: 20px;
+  position: absolute;
 
+}
+
+input#route-end {
+  width: 300px;
+  font-size: 20px;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+#route-trigger {
+  position: absolute;
+  left: 140px;
+
+}
+
+#form-route {
+  position: absolute;
+  top:130px;
+  left: 60px;
+
+}
+
+#route-formdrop {
+  font-size: 20px;
+  color: red;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 50px;
+/*#91BDFF;*/
+
+}
+
+.routelinks {
+  color: yellow;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  overflow: scroll;
+
+
+}
+#directions-button {
+  position: absolute;
+  right: 158px;
+  top: 90px;
+
+
+}
+
+input#directions-origin {
+  width: 300px;
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+
+}
+
+input#directions-destination {
+  width: 300px;
+  font-size: 20px;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+input#directions-trigger {
+  position: absolute;
+  right: 150px;
+
+}
+
+#form-directions {
+  position: absolute;
+  top: 130px;
+  right: 50px;
+}
+
+#directions-formdrop {
+  font-size: 20px;
+  color: red;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 50px;
 
 }
 
@@ -56,33 +162,30 @@
 
 }
 
-#citibike {
-  font-size: 20px;
-  color: red;
+
+#directions {
+  right: 10px;
+  position: absolute;
   background-color: #91BDFF;
-
-
+  border: 10px dotted white;
+  height: 500px;
+  width: 400px;
+  bottom: 115px;
+  border-radius: 10px;
+  overflow:scroll;
+  opacity: 0.85;
 }
 
-#bikeshops {
-  font-size: 20px;
-  color: red;
-  background-color: #91BDFF;
 
-}
 
-#accidents {
-  font-size: 20px;
-  color: red;
-  background-color: #91BDFF;
 
-}
 
 .footer_user {
   background-color: #333333;
   height: 100px;
   width: 1480px ;
-  bottom: 0px;
-  left: 0;
+  bottom: -10px;
+  left: -30px;
   right: 0px;
+  margin: 0 auto;
 }

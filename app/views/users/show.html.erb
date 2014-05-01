@@ -1,26 +1,19 @@
-<body>
-  <div id="user-wrapper">
+<body id="user-wrapper">
+  <!-- <div id="user-wrapper"> -->
     <%= link_to "Home", root_path, class: "links" %>
     <%= link_to "Edit Your Account", edit_user_path(@user), class: "links" %>
     <%= link_to "Delete Your Account", user_path(@user), method: :delete, class: "links" %>
 
-    <div id = "directions-button">
-    </div>
-
-    <form id = "form-directions">
-      Origin: <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin"><br>
-      Destination: <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination"><br>
-      <input id= "directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
-    </form>
 
     <div id= "create-route-button">
     </div>
     <form id="form-route">
-      Start: <input id="route-start" type="text" name="startname"><br>
-      End: <input id="route-end" type="text" name="endname">
+      <input id="route-start" type="text" name="startname" placeholder="Enter Start Point"><br>
+      <input id="route-end" type="text" name="endname" placeholder="Enter End Point">
       <br>
       <input id="route-trigger" type="submit" value="Submit">
     </form>
+
 
     <h1>Hi <%= @user.name %></h1>
     <form action="">
@@ -30,34 +23,39 @@
     </form>
 
 
-<!--     <center><button id="citibike">CitiBike Stations</button></center><br>
-
-    <center><button id="bikeshops">Bike Shops</button></center><br>
-
-    <center><button id="accidents">Accidents</button></center><br> -->
-
-
       <div id="map-canvas">
       </div>
 
-
+    <!-- hidden field to retrieve user ID in routes.js AJAX request -->
+    <input type="hidden" value="<%= @user.id %>" id="user-id"></input>
 
     <br/>
     <div id="routes">
 
       <h2 id="routestext"><center> My Routes </center></h2>
-      <%= link_to "See My Routes", user_routes_path(@user) %><br/>
+
         <ul>
     <% @routes.each do |route| %>
         <li>
-          <a href="/users/<%= @user.id %>/routes/<%= route.id %>">
+          <a class="routelinks" href="/users/<%= @user.id %>/routes/<%= route.id %>">
             <%= route.start_point %> to <%= route.end_point %>
           </a>
         </li>
     <% end %>
   </ul>
 
+
+      <div id="route-list">
+      </div>
+
     </div>
+     <div id = "directions-button">
+    </div>
+      <form id = "form-directions">
+      <input id="directions-origin" type="text" name="fname" placeholder="Enter Origin"><br>
+        <input id="directions-destination" type="text" name="destination" placeholder = "Enter Destination">
+      <input id= "directions-trigger" type="submit" value="Submit" placeholder="Enter Destination">
+    </form>
     <div id = "directions">
       <h2 id="directionstext"><center> Directions </center></h2>
     </div>
@@ -65,8 +63,8 @@
         <br>
             <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
                 CycleSmart and the WDI Project are registered trademarks of WDI Media, Inc.</p>
-          </div>
-  </div>
+      </div>
+  <!-- </div> -->
 
 </body>
 
