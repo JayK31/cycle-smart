@@ -2,7 +2,8 @@ function getDirections(){
   return {
       origin: autocompleteOrigin.getPlace().formatted_address,
       destination: autocompleteDestination.getPlace().formatted_address,
-      provideRouteAlternatives: false,
+      provideRouteAlternatives: true,
+      avoidHighways: true,
       travelMode: google.maps.TravelMode.BICYCLING,
       unitSystem: google.maps.UnitSystem.IMPERIAL
     };
