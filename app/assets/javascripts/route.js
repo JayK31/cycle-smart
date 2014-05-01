@@ -18,7 +18,7 @@ $(document).ready(function(){
     method: "GET",
     dataType: "json"
   }).done(function(routes){
-    alert("hi")
+    alert("hi");
     var i = 1;
     $.each(routes, function(index, route){
       var route_id = '"route-' + i;
