@@ -29,14 +29,25 @@ $(document).ready(function(){
 
   var render = new google.maps.DirectionsRenderer();
 
-    $("#directions").hide();
+  $("#directions").hide();
 
-  $("#directions-button").on('click', function(event){
-    event.preventDefault();
-    $("#directions").empty();
+  $("#directions-button").on("click", function(){
     $("#directions").slideDown();
 
+
+  });
+
+
+
+
+  $("#directions-trigger").on('click', function(event){
+    event.preventDefault();
+    $("#directions").empty();
     renderDirections(render);
   });
+
+
+
+
 });
 

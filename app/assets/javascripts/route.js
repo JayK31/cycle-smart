@@ -13,6 +13,7 @@ $(document).ready(function(){
     $("#routes").hide();
 
   $("#create-route-button").on('click', function(event){
+      event.preventDefault();
     $("#routes").slideDown();
   });
 
