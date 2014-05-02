@@ -1,29 +1,69 @@
 var direction = new google.maps.DirectionsService();
 var map;
-
-// creating global arrays for markers depending on type
 var station_markers_array = [];
 var accident_markers_array = [];
 var bikeshop_markers_array = [];
 var groupon_markers_array = [];
 
-// loop through marker array and clear each element off the map
-function clearMarker(array) {
-  if (array) {
-    $.each(array, function(index, element) {
-      array[index].setMap(null)
+
+
+function clearAccidents() {
+  if (accident_markers_array) {
+    $.each(accident_markers_array, function(index, accident) {
+      accident_markers_array[index].setMap(null)
+    })
+  }
+}
+function showAccidents() {
+  if (accident_markers_array) {
+    $.each(accident_markers_array, function(index, accident) {
+      accident_markers_array[index].setMap(map)
+    })
+  }
+};
+function clearCitibike() {
+  if (station_markers_array) {
+    $.each(station_markers_array, function(index, station) {
+      station_markers_array[index].setMap(null)
+    })
+  }
+}
+function showCitibike() {
+  if (station_markers_array) {
+    $.each(station_markers_array, function(index, station) {
+      station_markers_array[index].setMap(map)
     })
   }
 };
 
-// loop through marker array and set each element on the map
-function showMarker(array) {
-  if (array) {
-    $.each(array, function(index, element) {
-      array[index].setMap(map)
+function clearBikeshop() {
+  if (bikeshop_markers_array) {
+    $.each(bikeshop_markers_array, function(index, bikeshop) {
+      bikeshop_markers_array[index].setMap(null)
     })
   }
 }
+function showBikeshop() {
+  if (bikeshop_markers_array) {
+    $.each(bikeshop_markers_array, function(index, bikeshop) {
+      bikeshop_markers_array[index].setMap(map)
+    })
+  }
+};
+function clearGroupon() {
+  if (groupon_markers_array) {
+    $.each(groupon_markers_array, function(index, deal) {
+      groupon_markers_array[index].setMap(null)
+    })
+  }
+}
+function showGroupon() {
+  if (groupon_markers_array) {
+    $.each(groupon_markers_array, function(index, deal) {
+      groupon_markers_array[index].setMap(map)
+    })
+  }
+};
 
 // 'initialize' function gets passed 'location' object which contains user location info
 function initialize(location){
@@ -55,7 +95,7 @@ function initialize(location){
     map: map,
     draggable: true,
     animation: google.maps.Animation.DROP,
-    icon: "/assets/home-icon.png"
+    icon: "<%= asset_path 'home-icon.png' %>"
   });
 
   google.maps.event.addListener(marker, 'click', function() {
@@ -110,7 +150,7 @@ function initialize(location){
         // map: map,
         draggable: false,
         animation: google.maps.Animation.DROP,
-        icon: '/assets/blue-dot-button-small.gif'
+        icon: "<%= asset_path 'blue-dot-button-small.gif' %>"
      });
 
      // station_marker.setMap(map)
@@ -173,7 +213,7 @@ $.ajax({
           // map: map,
           draggable: false,
           animation: google.maps.Animation.DROP,
-          icon: '/assets/greenDot.gif'
+          icon: "<%= asset_path 'greenDot.gif' %>"
        });
 
      // station_marker.setMap(map)
@@ -194,33 +234,33 @@ $(document).ready(function(){
 
   $("#citibike").change(function() {
     if( $("#citibike").prop("checked")) {
-      showMarker(station_markers_array);
+      showCitibike();
     } else {
-      clearMarker(station_markers_array);
+      clearCitibike();
     }
   });
 
   $("#accidents").change(function() {
     if( $("#accidents").prop("checked")) {
-      showMarker(accident_markers_array);
+      showAccidents();
     } else {
-      clearMarker(accident_markers_array);
+      clearAccidents();
     }
   });
 
   $("#bikeshops").change(function() {
     if( $("#bikeshops").prop("checked")) {
-      showMarker(bikeshop_markers_array);
+      showBikeshop();
     } else {
-      clearMarker(bikeshop_markers_array);
+      clearBikeshop();
     }
-  })
+  });
 
   $("#groupon").change(function() {
     if( $("#groupon").prop("checked")) {
-      showMarker(groupon_markers_array);
+      showGroupon();
     } else {
-      clearMarker(groupon_markers_array);
+      clearGroupon();
     }
   });
 });
