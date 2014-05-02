@@ -208,8 +208,6 @@ $(document).ready(function(){
     }
   });
 
-
-
   $("#bikeshops").change(function() {
     if( $("#bikeshops").prop("checked")) {
       showMarker(bikeshop_markers_array);
