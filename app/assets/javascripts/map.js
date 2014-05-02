@@ -1,69 +1,29 @@
 var direction = new google.maps.DirectionsService();
 var map;
+
+// creating global arrays for markers depending on type
 var station_markers_array = [];
 var accident_markers_array = [];
 var bikeshop_markers_array = [];
 var groupon_markers_array = [];
 
-
-
-function clearAccidents() {
-  if (accident_markers_array) {
-    $.each(accident_markers_array, function(index, accident) {
-      accident_markers_array[index].setMap(null)
-    })
-  }
-}
-function showAccidents() {
-  if (accident_markers_array) {
-    $.each(accident_markers_array, function(index, accident) {
-      accident_markers_array[index].setMap(map)
-    })
-  }
-};
-function clearCitibike() {
-  if (station_markers_array) {
-    $.each(station_markers_array, function(index, station) {
-      station_markers_array[index].setMap(null)
-    })
-  }
-}
-function showCitibike() {
-  if (station_markers_array) {
-    $.each(station_markers_array, function(index, station) {
-      station_markers_array[index].setMap(map)
+// loop through marker array and clear each element off the map
+function clearMarker(array) {
+  if (array) {
+    $.each(array, function(index, element) {
+      array[index].setMap(null)
     })
   }
 };
 
-function clearBikeshop() {
-  if (bikeshop_markers_array) {
-    $.each(bikeshop_markers_array, function(index, bikeshop) {
-      bikeshop_markers_array[index].setMap(null)
+// loop through marker array and set each element on the map
+function showMarker(array) {
+  if (array) {
+    $.each(array, function(index, element) {
+      array[index].setMap(map)
     })
   }
 }
-function showBikeshop() {
-  if (bikeshop_markers_array) {
-    $.each(bikeshop_markers_array, function(index, bikeshop) {
-      bikeshop_markers_array[index].setMap(map)
-    })
-  }
-};
-function clearGroupon() {
-  if (groupon_markers_array) {
-    $.each(groupon_markers_array, function(index, deal) {
-      groupon_markers_array[index].setMap(null)
-    })
-  }
-}
-function showGroupon() {
-  if (groupon_markers_array) {
-    $.each(groupon_markers_array, function(index, deal) {
-      groupon_markers_array[index].setMap(map)
-    })
-  }
-};
 
 // 'initialize' function gets passed 'location' object which contains user location info
 function initialize(location){
@@ -234,41 +194,35 @@ $(document).ready(function(){
 
   $("#citibike").change(function() {
     if( $("#citibike").prop("checked")) {
-      showCitibike();
+      showMarker(station_markers_array);
     } else {
-      clearCitibike();
+      clearMarker(station_markers_array);
     }
   });
 
   $("#accidents").change(function() {
     if( $("#accidents").prop("checked")) {
-      showAccidents();
+      showMarker(accident_markers_array);
     } else {
-      clearAccidents();
+      clearMarker(accident_markers_array);
     }
-<<<<<<< HEAD
-
   });
-=======
-  })
->>>>>>> testing_groupon
+
+
 
   $("#bikeshops").change(function() {
     if( $("#bikeshops").prop("checked")) {
-      showBikeshop();
+      showMarker(bikeshop_markers_array);
     } else {
-      clearBikeshop();
+      clearMarker(bikeshop_markers_array);
     }
-<<<<<<< HEAD
-=======
   })
 
   $("#groupon").change(function() {
     if( $("#groupon").prop("checked")) {
-      showGroupon();
+      showMarker(groupon_markers_array);
     } else {
-      clearGroupon();
+      clearMarker(groupon_markers_array);
     }
->>>>>>> testing_groupon
   });
 });
