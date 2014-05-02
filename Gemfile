@@ -28,7 +28,7 @@ gem 'rails_12factor', group: :production
 # ruby "2.1.0"
 ruby "1.9.3"
 
-# rbenv local 1.9.3 
+rbenv "1.9.3-p484"
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
