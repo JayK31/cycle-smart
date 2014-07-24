@@ -59,4 +59,25 @@ It's free and always will be.</h1>
             <p class="footertext">© 2014 CycleSmart, Inc., All Rights Reserved
                 CycleSmart and the WDI Project are registered trademarks of WDI Media, Inc.</p>
       </div>
+
+<script>
+  (function() {
+    var fks = document.createElement('script');
+    fks.type = 'text/javascript';
+    fks.async = true;
+    fks.setAttribute("fk-userid","9999");
+    fks.setAttribute("fk-server","localhost:3000");
+    fks.src = ('https:' == document.location.protocol ? 'https://':'http://') +
+      'localhost:3000/assets/featurekicker.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fks, s);
+  })();
+</script>
+<script>
+  function fkVisitorData(){
+    return {
+      "email":"" // pass current users email like john.smith@gmail.com or leave blank when email not available.
+    }
+  }
+</script>
 </body>
